@@ -1,35 +1,36 @@
 <?php
 /**
- * ACF Customizations
+ * ACF Configuration
  **/
 
-namespace BEStarter\ACF;
+/*** ACF: hide menu item ***/
+//add_filter('acf/settings/show_admin', '__return_false');
 
-/**
- * Remove ACF admin menu
- */
-function remove_acf_admin_menu(){
-	if ( !(function_exists('wp_get_environment_type') && wp_get_environment_type()==='production') ){
-		return;
-	}
 
-	$slug = 'edit.php?post_type=acf-field-group';
-	remove_submenu_page($slug, $slug);
-	remove_submenu_page($slug, 'post-new.php?post_type=acf-field-group');
-}
-add_action('admin_menu', __NAMESPACE__ .'\\remove_acf_admin_menu');
+/*** ACF: register Options page ***/
+if ( function_exists('acf_add_options_page') ):
+    acf_add_options_page(
+        array(
+            'page_title'    => __('Theme Settings', CSWP),
+            'menu_title'    => __('Theme Settings', CSWP),
+            'menu_slug'     => 'theme-settings',
+            'capability'    => 'manage_options',
+            'position'      => '59',
+            'redirect'      => true,
+        )
+    );
+    
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'General Theme Settings',
+	// 	'menu_title'	=> 'General',
+	// 	'parent_slug'	=> 'theme-settings'
+	// ));
+endif;
 
-/**
- * Register Options Page
- */
-function register_options_page() {
-	if ( function_exists( 'acf_add_options_page' ) ) {
-		acf_add_options_page(
-			[
-				'title'      => __( 'Site Options', 'bestarter_textdomain' ),
-				'capability' => 'manage_options',
-			]
-		);
-	}
-}
-add_action( 'init', __NAMESPACE__ . '\\register_options_page' );
+
+/*** ACF: Google API ***/
+// function cs__acf_google_map_api($api){
+//     $api['key'] = get_field('google_maps_api_key', 'options');
+//     return $api;
+// }
+// add_filter('acf/fields/google_map/api', 'cs__acf_google_map_api');

@@ -1,5 +1,5 @@
 <?php
-define('CSWP', 'cswp', true);
+define('CSWP', 'cswp');
 
 // Constants
 include 'inc/constants.php';
@@ -109,31 +109,6 @@ add_action('init', function (){
 /*** END Disable comments ***/
 
 
-
-/*------------------------------------*\
-	Functions
-\*------------------------------------*/
-/*** Live Reload with Grunt in WordPress ***/
-if ( in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1')) ){
-    wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
-    wp_enqueue_script('livereload');
-}
-
-
-/*** Get template page ID ***/
-function cs__get_template_page_ID( $template, $index=0 ){
-    $pages = get_posts(array(
-        'post_type' =>'page',
-        'meta_key'  =>'_wp_page_template',
-        'meta_value'=> 'templates/'. $template .'.php',
-        'orderby' => 'ID',
-        'order' => 'ASC'
-    ));
-
-    return $pages[$index]->ID;
-}
-
-
 /*------------------------------------*\
 	Actions + Filters
 \*------------------------------------*/
@@ -167,14 +142,20 @@ add_filter('get_custom_logo', function( $html ){ // Change custom logo class
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 
+// Theme
+include_once 'inc/helper-functions.php';
+include_once 'inc/wordpress-cleanup.php';
+
+// Functionality
+
+// Plugin support
+include_once 'inc/acf.php';
 
 /*
 // Enqueue assets
 include 'inc/enqueue.php';
 // Create custom post types and taxonomies
 include_once 'inc/post-types.php';
-// ACF Settings
-include_once 'inc/acf-config.php';
 // Admin
 include_once 'inc/admin.php';
 // Gutenberg

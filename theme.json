@@ -172,9 +172,9 @@
 			],
 			"fontSizes": [
 				{
-					"name": "Tiny",
+					"name": "Extra Small",
 					"size": "0.875rem",
-					"slug": "tiny"
+					"slug": "x-small"
 				},
 				{
 					"name": "Small",
@@ -264,6 +264,12 @@
 			"core/pullquote": {
 				"border": {
 					"width": "1px 0"
+				}
+			},
+			"core/separator": {
+				"color": {
+					"background": "var(--wp--preset--color--medium-gray)",
+					"text": "var(--wp--preset--color--medium-gray)"
 				}
 			},
 			"core/query-title": {
