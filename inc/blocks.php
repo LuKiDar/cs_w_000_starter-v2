@@ -9,7 +9,7 @@ function cs__register_block_categories( $categories, $post ){
 		array(
 			array(
 				'slug' => 'custom-blocks',
-				'title' => __('Custom blocks'),
+				'title' => __('Custom blocks', CSWP),
 			),
 		),
 		$categories

@@ -74,24 +74,15 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 
 
 // Theme
-include_once 'inc/helper-functions.php';
-include_once 'inc/wordpress-cleanup.php';
+require_once 'inc/enqueue.php';
+require_once 'inc/helper-functions.php';
+require_once 'inc/wordpress-cleanup.php';
 
 // Functionality
+// include_once 'inc/admin.php';
 require_once 'inc/blocks.php';
+// include_once 'inc/pagination.php';
+require_once 'inc/post-types.php';
 
 // Plugin support
-include_once 'inc/acf.php';
-
-/*
-// Enqueue assets
-include 'inc/enqueue.php';
-// Create custom post types and taxonomies
-include_once 'inc/post-types.php';
-// Admin
-include_once 'inc/admin.php';
-// Gutenberg
-//include_once 'inc/gutenberg.php';
-// Pagination
-include_once 'inc/pagination.php';
-*/
+require_once 'inc/acf.php';

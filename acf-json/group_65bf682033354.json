@@ -20,6 +20,26 @@
             "endpoint": 0
         },
         {
+            "key": "field_65c0e6e3efd7a",
+            "label": "Google maps API key",
+            "name": "google_maps_api_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65bf6884238cd",
             "label": "Social networks",
             "name": "social_networks",
@@ -179,5 +199,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707043128
+    "modified": 1707140870
 }

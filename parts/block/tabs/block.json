@@ -10,18 +10,21 @@
 	"apiVersion": 2,
 	"keywords": [],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"renderTemplate": "render.php"
 	},
     "attributes": {},
-	"styles": [],
+	"styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "variation", "label": "Variation" }
+	],
 	"supports": {
 		"align": false,
-		"anchor": false,
+		"anchor": true,
 		"alignContent": false,
 		"color": {
 			"text": false,
-			"background": true,
+			"background": false,
 			"link": false
 		},
 		"alignText": false,
