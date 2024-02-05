@@ -1,0 +1,10 @@
+{
+	"outDir": ".",
+	"removeComments": true,
+	"sourceMaps": false,
+	"indentType": "tab",
+	"indentWidth": 1,
+	"linefeed": "cr",
+	"omitSourceMapUrl": true,
+	"outputStyle": "compressed"
+}

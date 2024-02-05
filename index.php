@@ -1,33 +1,27 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Base template
+ **/
 
-<div class="news-feed">
-    <header class="news-feed__header container container--1">
-        <div class="col">
-            <h1 class="news-feed__title"><?php _e('Latest Posts', CSWP); ?></h1>
-        </div>
-    </header>
+get_header();
 
-    <div class="news-feed__container container">
-        <?php if ( have_posts() ): ?>
-            <?php while ( have_posts() ): the_post(); ?>
-                <div class="news-feed__item col col--4 col--md-6 col--sm-6 col--xs-12">
-                    <?php get_template_part('parts/content/post-card'); ?>
-                </div>
-            <?php endwhile; ?>
+if ( have_posts() ):
+	if ( is_home() && !is_front_page() ){ ?>
+		<header>
+			<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+		</header>
+	<?php }
 
-        <?php else: ?>
-            <div class="news-feed__item col col--12">
-                <h2><?php _e('Sorry, no posts found.', CSWP); ?></h2>
-            </div>
+	/* Start the Loop */
+	while ( have_posts() ): the_post();
+		get_template_part('parts/content/'. get_post_type() .'-card/'. get_post_type() .'-card');
+	endwhile;
 
-        <?php endif; ?>
-    </div>
+	the_posts_navigation();
 
-    <footer class="news-feed__footer container container--1">
-        <div class="col">
-            <?php cs__the_pagination(); ?>
-        </div>
-    </footer>
-</div>
+else:
+	get_template_part('parts/content/none');
 
-<?php get_footer(); ?>
+endif;
+
+get_footer(); ?>

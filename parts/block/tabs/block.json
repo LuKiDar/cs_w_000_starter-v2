@@ -1,0 +1,30 @@
+{
+	"name": "cs/tabs",
+	"title": "Tabs",
+	"description": "",
+	"category": "custom-blocks",
+	"icon": "",
+	"style": "block-tabs",
+	"script": "block-tabs",
+	"editorStyle": "",
+	"apiVersion": 2,
+	"keywords": [],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+    "attributes": {},
+	"styles": [],
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false,
+		"color": {
+			"text": false,
+			"background": true,
+			"link": false
+		},
+		"alignText": false,
+		"fullHeight": false
+	}
+}

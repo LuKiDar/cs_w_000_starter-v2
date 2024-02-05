@@ -1,7 +1,12 @@
-<?php /*** Content / Post card ***/
+<?php
+/**
+ * Content / Post card
+ */
 
 $date_format = get_option('date_format');
-$post_categories = wp_get_post_categories(get_the_ID(), array('fields'=>'ids')); ?>
+$post_categories = wp_get_post_categories(get_the_ID(), array('fields'=>'ids'));
+
+$modifier = ''; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-card '. $modifier); ?>>
     <?php if ( has_post_thumbnail() ){ ?>

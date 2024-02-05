@@ -1,7 +1,7 @@
 <?php
 /**
  * Helper functions
- **/
+ */
 
 /*** Get template page ID ***/
 function cs__get_template_page_ID( $template, $index=0 ){

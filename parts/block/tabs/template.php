@@ -1,1 +1,0 @@
-<?php /* Block / Tabs */ ?>

@@ -31,79 +31,94 @@
 			"link": false,
 			"palette": [
 				{
-					"slug": "foreground",
+				  "color": "inherit",
+				  "name": "Inherit",
+				  "slug": "inherit"
+				},
+				{
+				  "color": "currentcolor",
+				  "name": "Current",
+				  "slug": "current"
+				},
+				{
+				  "color": "transparent",
+				  "name": "Transparent",
+				  "slug": "transparent"
+				},
+				{
 					"color": "#000000",
-					"name": "Foreground"
+					"name": "Foreground",
+					"slug": "foreground"
 				},
 				{
-					"slug": "background",
 					"color": "#ffffff",
-					"name": "Background"
+					"name": "Background",
+					"slug": "background"
 				},
 				{
-					"slug": "primary",
 					"color": "#2E2E3A",
-					"name": "Primary"
+					"name": "Primary",
+					"slug": "primary"
 				},
 				{
-					"slug": "secondary",
 					"color": "#BB5D2F",
-					"name": "Secondary"
+					"name": "Secondary",
+					"slug": "secondary"
 				},
 				{
-					"slug": "tertiary",
 					"color": "#DBBCA7",
-					"name": "Tertiary"
+					"name": "Tertiary",
+					"slug": "tertiary"
 				},
 				{
-					"slug": "quaternary",
 					"color": "#DF9151",
-					"name": "Quaternary"
+					"name": "Quaternary",
+					"slug": "quaternary"
 				},
 				{
-					"slug": "quinary",
 					"color": "#F00",
-					"name": "Quinary"
+					"name": "Quinary",
+					"slug": "quinary"
 				},
 				{
-					"slug": "senary",
 					"color": "#F00",
-					"name": "Senary"
+					"name": "Senary",
+					"slug": "senary"
 				},
 				{
-					"slug": "septenary",
 					"color": "#F00",
-					"name": "Septenary"
+					"name": "Septenary",
+					"slug": "septenary"
 				},
 				{
-					"slug": "octonary",
 					"color": "#F00",
-					"name": "Octonary"
+					"name": "Octonary",
+					"slug": "octonary"
 				},
 				{
-					"slug": "nonary",
 					"color": "#F00",
-					"name": "Nonary"
+					"name": "Nonary",
+					"slug": "nonary"
 				},
 				{
-					"slug": "denary",
 					"color": "#F00",
-					"name": "Denary"
+					"name": "Denary",
+					"slug": "denary"
 				},
 				{
-					"slug": "dark-gray",
 					"color": "#595959",
-					"name": "Dark gray"
+					"name": "Dark gray",
+					"slug": "dark-gray"
 				},
 				{
-					"slug": "medium-gray",
 					"color": "#919191",
-					"name": "Medium gray"
+					"name": "Medium gray",
+					"slug": "medium-gray"
 				},
 				{
-					"slug": "light-gray",
 					"color": "#F5F5F5",
-					"name": "Light gray"
+					"name": "Light gray",
+					"slug": "light-gray"
 				}
 			]
 		},
@@ -173,13 +188,18 @@
 			"fontSizes": [
 				{
 					"name": "Extra Small",
-					"size": "0.875rem",
+					"size": "0.75rem",
 					"slug": "x-small"
 				},
 				{
 					"name": "Small",
-					"size": "1rem",
+					"size": "0.875rem",
 					"slug": "small"
+				},
+				{
+				  "name": "Base",
+				  "size": "1rem",
+				  "slug": "base"
 				},
 				{
 					"name": "Medium",
@@ -417,7 +437,7 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-sans-serif)",
-			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontSize": "var(--wp--preset--font-size--base)",
 			"lineHeight": "var(--wp--custom--line-height--default)"
 		}
 	}
