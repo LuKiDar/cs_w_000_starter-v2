@@ -14,7 +14,7 @@
 			
 			/*** JS Validation ***/
 			jshint: {
-				all: ['Gruntfile.js', 'assets/js/source/*.js', 'parts/block/*/src/*.js'],
+				all: ['Gruntfile.js', 'assets/js/source/*.js'], //'parts/block/*/src/*.js'
 				options: {
 					"bitwise": true,
 					"browser": true,
@@ -47,7 +47,7 @@
 					},
 					files: {
 						'assets/js/theme.js': ['assets/js/vendor/*.js', 'assets/js/vendor/*/*.js', 'assets/js/source/*.js'],
-						'./script.js': ['parts/block/*/src/*.js', 'parts/block/*/src/*/*.js'],
+						// 'parts/block/*/script.js': ['parts/block/*/src/*.js', 'parts/block/*/src/*/*.js'],
 					},
 				}
 			},
@@ -57,7 +57,7 @@
 				dist: {
 					files: {
 						'assets/js/theme.js': ['assets/js/theme.js'],
-						'parts/block/*/script.js': ['parts/block/*/script.js']
+						// 'parts/block/*/script.js': ['parts/block/*/script.js']
 					},
 				}
 			},
@@ -69,11 +69,20 @@
 						noSourceMap: true,
 						style: 'compressed'
 					},
-					files: {
-						'assets/css/theme.css': 'assets/scss/theme.scss',
-						'assets/css/admin.css': 'assets/scss/admin.scss',
-						'assets/css/editor.css': 'assets/scss/editor.scss'
-					}
+					files: [
+						{
+							'assets/css/theme.css': 'assets/scss/theme.scss',
+							'assets/css/admin.css': 'assets/scss/admin.scss',
+							'assets/css/editor.css': 'assets/scss/editor.scss'
+						},
+						{
+							expand: true,
+							cwd: 'parts/block',
+							src: ['**/style.scss'],
+							dest: 'parts/block',
+							ext: '.css'
+						}
+					]
 				}
 			},
 
@@ -86,7 +95,7 @@
 					]
 				},
 				dist: {
-					src: 'assets/css/*.css'
+					src: ['assets/css/*.css', 'parts/block/**/*.css']
 				}
 			},
 
@@ -106,6 +115,7 @@
 						'assets/scss/',
 						'assets/scss/*',
 						'assets/scss/**/*',
+						'parts/block/**/*'
 					],
 					tasks: ['sass', 'postcss'],
 					options: {
@@ -118,19 +128,6 @@
 						livereload: true
 					}
 				}
-			},
-
-			browserSync: {
-				dev: {
-					bsFiles: {
-						src : 'assets/css/*.css'
-					},
-					options: {
-						watchTask: true,
-						// make sure to change this url so that Browsersync works
-						proxy: 'starter-theme.local'
-					}
-				}
 			}
 		});
 
@@ -138,11 +135,10 @@
 		grunt.registerTask('default', [
 			'clean',
 			'jshint',
-			// 'concat',
-			// 'uglify',
-			// 'sass',
-			// 'postcss',
-			// 'browserSync',
+			'concat',
+			'uglify',
+			'sass',
+			'postcss',
 			'watch',
 		]);
 	};

@@ -1,0 +1,15 @@
+/**
+ * Block / Tabs
+ */
+
+@import '../../../assets/scss/abstracts/functions';
+@import '../../../assets/scss/abstracts/variables';
+@import '../../../assets/scss/abstracts/mixins';
+
+
+.block-tabs {
+	background: $foreground;
+	color: $background;
+	display: flex;
+	min-height: 100px;
+}
