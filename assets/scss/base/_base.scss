@@ -29,10 +29,6 @@ html {
     font-size: $general_fontSize;
     height: 100%;
     line-height: $general_lineHeight;
-
-    // @include mediaMaxWidth($mobileBreakpoint){
-    //     font-size: 14px;
-    // }
 }
 body {
     overflow-x: hidden;
