@@ -1,0 +1,104 @@
+/**
+ * Base 
+ */
+ 
+*::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+}
+*::--webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+::selection {
+	background: $medium_gray;
+	color: $white;
+}
+
+#wpadminbar * {
+    min-width: 0;
+}
+html {
+    color: $general_color;
+    font-family: $general_font;
+    font-size: $general_fontSize;
+    height: 100%;
+    line-height: $general_lineHeight;
+
+    // @include mediaMaxWidth($mobileBreakpoint){
+    //     font-size: 14px;
+    // }
+}
+body {
+    overflow-x: hidden;
+    word-wrap: break-word;
+
+    * {
+        outline: none;
+    }
+    &.is-menu-active,
+    &.is-modal-active {
+        overflow: hidden;
+    }
+}
+.site {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: map-get($header_height,'default');
+
+    @include mediaMaxWidth($mobileBreakpoint){
+        padding-top: map-get($header_height,$mobileBreakpoint);
+    }
+
+    .screen-reader-shortcut {
+        position: absolute;
+        top: -1000em;
+
+        &:focus,
+        &:focus-visible {
+            background: #f0f0f1;
+            box-shadow: 0 0 2px 2px rgb(0 0 0 / 60%);
+            color: $black;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            height: auto;
+            left: 6px;
+            line-height: normal;
+            outline-offset: -1px;
+            padding: 15px 23px 14px;
+            text-decoration: none;
+            top: 7px;
+            width: auto;
+            z-index: 100000;
+        }
+    }
+
+    body.admin-bar & {
+        min-height: calc(100vh - 32px);
+
+        @include mediaMaxWidth(782){
+            min-height: calc(100vh - 46px);
+        }
+        @include mediaMaxWidth(600){
+            min-height: 100vh;
+        }
+    }
+}
+.main {
+    overflow: hidden;
+}
+// .scrollbar-measure {
+//     height: 100px;
+//     overflow: scroll;
+//     position: absolute;
+//     top: -9999px;
+//     width: 100px;
+// }

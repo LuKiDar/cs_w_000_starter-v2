@@ -73,7 +73,7 @@ $fsize_h6:			var(--wp--preset--font-size--heading-6);
 
 /*** Content ***/
 // Focus
-$focus_default: 0px 0px 0px 2px $white, 0px 0px 0px 4px $focus, 0px 0px 6px 5px rgba($focus, .6);
+$focus_default: 0px 0px 0px 2px $background, 0px 0px 0px 4px $focus, 0px 0px 6px 5px rgba($focus, .6);
 
 // Header
 $header_height: (
