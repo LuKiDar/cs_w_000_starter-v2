@@ -5,8 +5,8 @@
 
 		</main>
 
-		<footer id="colophon" class="site-footer">
-			<div class="footer__container container">
+		<footer id="colophon" class="site-footer container">
+			<div class="grid">
 				<div class="col">
 					<?php wp_nav_menu(array(
 						'menu' => 'footer-menu',

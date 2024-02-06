@@ -1,0 +1,72 @@
+/**
+ * Accordion 
+ */
+
+.accordion {
+    $c: &;
+    
+    border-bottom: 1px solid $light_gray;
+    margin: 0;
+
+    &__header {
+        background: $background;
+        border-top: 1px solid $light_gray;
+        cursor: pointer;
+        font-weight: $fweight_bold;
+        margin: 0;
+        padding: rem(20) 0;
+        position: relative;
+        transition: color .2s;
+
+        &::before,
+        &::after {
+            background: $dark_gray;
+            content: '';
+            display: block;
+            position: absolute;
+            transition: all .2s;
+        }
+        &::before {
+            height: rem(2);
+            right: 0;
+            top: rem(28);
+            width: rem(18);
+        }
+        &::after {
+            height: rem(18);
+            right: rem(8);
+            top: rem(20);
+            width: rem(2);
+        }
+
+        &.is-active {
+            &::after {
+                opacity: 0;
+            }
+        }
+        &:hover {
+            @include mediaMinWidth( $mobileBreakpoint ){
+                color: $dark_gray;
+            }
+        }
+        &:focus-visible {
+            box-shadow: $focus_default;
+            z-index: 2;
+        }
+    }
+    &__content {
+        background: $background;
+        margin-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .2s, padding .2s;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            height: rem(20);
+            width: 100%;
+        }
+    }
+}

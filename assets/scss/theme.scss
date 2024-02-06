@@ -6,3 +6,25 @@
 @import 'base/normalize';
 @import 'base/grid';
 @import 'base/base';
+@import 'base/typography';
+@import 'base/buttons';
+// @import 'base/wp-blocks';
+
+
+/*** Vendor styling ***/
+
+
+/*** Components styling ***/
+// @import 'components/accordion';
+// @import 'components/breadcrumbs';
+// @import 'components/feed-categories';
+// @import 'components/forms';
+// @import 'components/modal';
+@import 'components/navigation';
+@import 'components/pagination';
+// @import 'components/tabs';
+
+
+/************ Layout ************/
+@import 'layout/header';
+@import 'layout/footer';

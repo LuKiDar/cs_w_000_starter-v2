@@ -79,10 +79,10 @@ body {
 	body.admin-bar & {
 		min-height: calc(100vh - 32px);
 
-		@include mediaMaxWidth(782){
+		@include mediaMaxWidth( 782 ){
 			min-height: calc(100vh - 46px);
 		}
-		@include mediaMaxWidth(600){
+		@include mediaMaxWidth( 600 ){
 			min-height: 100vh;
 		}
 	}

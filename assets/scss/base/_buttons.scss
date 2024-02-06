@@ -1,0 +1,79 @@
+/**
+ * Buttons 
+ */
+
+%btn {
+    border: 2px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: $fweight_bold;
+    line-height: $lineheight_default;
+    min-width: 170px;
+    padding: 11px 23px !important;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background .2s, border-color .2s, box-shadow .2s, color .2s;
+
+    &[disabled],
+    &.disabled {
+        background-color: $light_gray !important;
+        border-color: $light_gray !important;
+        box-shadow: none !important;
+        color: $background !important;
+        cursor: not-allowed;
+        outline: none !important;
+        text-decoration: none !important;
+    }
+
+    &:focus-visible {
+        box-shadow: $focus_default;
+    }
+}
+
+.button--fill,
+.button--outline {
+    @extend %btn;
+}
+
+// Fill
+.button--fill {
+    // background: $foreground;
+    // border-color: $foreground;
+    // color: $background;
+
+    // &:hover {
+    //     @include mediaMinWidth( $mobileBreakpoint ){
+    //         background: transparent;
+    //         border-color: $foreground;
+    //         color: $foreground;
+    //     }
+    // }
+    // &:focus-visible {
+    //     background: transparent;
+    //     border-color: $foreground;
+    //     color: $foreground;
+    // }
+}
+
+// Outline
+.button--outline {
+    // background: transparent;
+    // border-color: $foreground;
+    // color: $foreground;
+
+    // &:hover {
+    //     @include mediaMinWidth( $mobileBreakpoint ){
+    //         background: transparent;
+    //         border-color: $foreground;
+    //         color: $foreground;
+    //     }
+    // }
+    // &:focus-visible {
+    //     background: transparent;
+    //     border-color: $foreground;
+    //     color: $foreground;
+    // }
+}

@@ -3,8 +3,8 @@
  */
  
 /*** Media Queries ***/
-@mixin mediaMinWidth($minWidth){
-	@if type-of($minWidth) == string {
+@mixin mediaMinWidth( $minWidth ){
+	@if type-of($minWidth)==string {
 		$minWidth: map-get($breakpoints, $minWidth);
 	}
 
@@ -12,8 +12,8 @@
 		@content;
 	}
 }
-@mixin mediaMaxWidth($maxWidth){
-	@if type-of($maxWidth) == string {
+@mixin mediaMaxWidth( $maxWidth ){
+	@if type-of($maxWidth)==string {
 		$maxWidth: map-get($breakpoints, $maxWidth) - 1;
 	}
 
@@ -21,11 +21,11 @@
 		@content;
 	}
 }
-@mixin mediaBetween($minWidth, $maxWidth){
-	@if type-of($minWidth) == string {
+@mixin mediaBetween( $minWidth, $maxWidth ){
+	@if type-of($minWidth)==string {
 		$minWidth: map-get($breakpoints, $minWidth);
 	}
-	@if type-of($maxWidth) == string {
+	@if type-of($maxWidth)==string {
 		$maxWidth: map-get($breakpoints, $maxWidth) - 1;
 	}
 
@@ -36,21 +36,21 @@
 
 
 /*** Get styles ***/
-@mixin getStyles($styles, $screen:''){
-	@each $name, $value in $styles{
+@mixin getStyles( $styles, $screen:'' ){
+	@each $name, $value in $styles {
 		#{$name}: #{$value};
 	}
 }
 
-@mixin getStylesBreakpoints($styles){
+@mixin getStylesBreakpoints( $styles ){
 	@if type_of($styles)=='map' {
-		@each $itemScreen, $itemStyles in $styles{
+		@each $itemScreen, $itemStyles in $styles {
 			@if $itemScreen=='xl' or $itemScreen=='lg' or $itemScreen=='md' or $itemScreen=='sm' or $itemScreen=='xs'{
-				@include mediaMaxWidth($itemScreen){
-					@include getStyles($itemStyles, $itemScreen);
+				@include mediaMaxWidth( $itemScreen ){
+					@include getStyles( $itemStyles, $itemScreen );
 				}
-			} @else if $itemScreen=='default'{
-				@include getStyles($itemStyles, $itemScreen);
+			} @else if $itemScreen=='default' {
+				@include getStyles( $itemStyles, $itemScreen );
 			}
 		}
 	}

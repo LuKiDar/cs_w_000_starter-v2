@@ -26,8 +26,8 @@
 .grid {
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: calc(-1 * #{$layout_padding});
-	margin-right: calc(-1 * #{$layout_padding});
+	margin-left: -$layout_padding;
+	margin-right: -$layout_padding;
 
 	&--ai-start {
 		align-items: flex-start;
@@ -56,7 +56,7 @@
 		}
 	}
 	// .container--xl-*
-	@include mediaBetween(lg,xl){
+	@include mediaBetween( lg, xl ){
 		@for $i from 1 through $layout_columns {
 			&--xl-#{$i} > .col {
 				flex: 0 0 (100%/$i);
@@ -65,7 +65,7 @@
 		}
 	}
 	// .container--lg-*
-	@include mediaBetween(md,lg){
+	@include mediaBetween( md, lg ){
 		@for $i from 1 through $layout_columns {
 			&--lg-#{$i} > .col {
 				flex: 0 0 (100%/$i);
@@ -74,7 +74,7 @@
 		}
 	}
 	// .container--md-*
-	@include mediaBetween(sm,md){
+	@include mediaBetween( sm, md ){
 		@for $i from 1 through $layout_columns {
 			&--md-#{$i} > .col {
 				flex: 0 0 (100%/$i);
@@ -83,7 +83,7 @@
 		}
 	}
 	// .container--sm-*
-	@include mediaBetween(xs,sm){
+	@include mediaBetween( xs, sm ){
 		@for $i from 1 through $layout_columns {
 			&--sm-#{$i} > .col {
 				flex: 0 0 (100%/$i);
@@ -92,7 +92,7 @@
 		}
 	}
 	// .container--xs-*
-	@include mediaMaxWidth(xs){
+	@include mediaMaxWidth( xs ){
 		@for $i from 1 through $layout_columns {
 			&--xs-#{$i} > .col {
 				flex: 0 0 (100%/$i);
@@ -115,7 +115,7 @@
 		}
 	}
 	// .col--xl-*
-	@include mediaBetween(lg,xl){
+	@include mediaBetween( lg, xl ){
 		@for $i from 1 through $layout_columns {
 			&--xl-#{$i} {
 				flex: 0 0 (100%/$layout_columns*$i);
@@ -124,7 +124,7 @@
 		}
 	}
 	// .col--lg-*
-	@include mediaBetween(md,lg){
+	@include mediaBetween( md, lg ){
 		@for $i from 1 through $layout_columns {
 			&--lg-#{$i} {
 				flex: 0 0 (100%/$layout_columns*$i);
@@ -133,7 +133,7 @@
 		}
 	}
 	// .col--md-*
-	@include mediaBetween(sm,md){
+	@include mediaBetween( sm, md ){
 		@for $i from 1 through $layout_columns {
 			&--md-#{$i} {
 				flex: 0 0 (100%/$layout_columns*$i);
@@ -142,7 +142,7 @@
 		}
 	}
 	// .col--sm-*
-	@include mediaBetween(xs,sm){
+	@include mediaBetween( xs, sm ){
 		@for $i from 1 through $layout_columns {
 			&--sm-#{$i} {
 				flex: 0 0 (100%/$layout_columns*$i);
@@ -151,7 +151,7 @@
 		}
 	}
 	// .col--xs-*
-	@include mediaMaxWidth(xs){
+	@include mediaMaxWidth( xs ){
 		@for $i from 1 through $layout_columns {
 			&--xs-#{$i} {
 				flex: 0 0 (100%/$layout_columns*$i);
