@@ -7,14 +7,14 @@
 function cs__register_post_types(){
 	$types = array(
 		// Where the magic happens
-		array(
-			'slug'	 	 => 'example_cpt',
-			'single' 	 => 'Example',
-			'plural' 	 => 'Examples',
-			'icon'	 	 => 'dashicons-cart',
-			'rewrite'	 => array(),
-			'taxonomies' => array('example_tax')
-		)
+		// array(
+		// 	'slug'	 	 => 'example_cpt',
+		// 	'single' 	 => 'Example',
+		// 	'plural' 	 => 'Examples',
+		// 	'icon'	 	 => 'dashicons-open-folder',
+		// 	'rewrite'	 => array(),
+		// 	'taxonomies' => array('example_tax')
+		// )
 	);
 
 	foreach ( $types as $type ){
@@ -52,14 +52,14 @@ add_action('init', 'cs__register_post_types');
 function cs__register_taxonomies() {
 	$taxonomies = array(
 		// Where the magic happens
-		array(
-			'cpt'			=> 'example_cpt',
-			'slug'			=> 'example_tax',
-			'single'		=> 'Category',
-			'plural'		=> 'Categories',
-			'hierarchical'	=> true,
-			'rewrite'		=> array('slug' => 'category')
-		)
+		// array(
+		// 	'cpt'			=> 'example_cpt',
+		// 	'slug'			=> 'example_tax',
+		// 	'single'		=> 'Category',
+		// 	'plural'		=> 'Categories',
+		// 	'hierarchical'	=> true,
+		// 	'rewrite'		=> array('slug' => 'category')
+		// )
 	);
 
 	foreach ( $taxonomies as $taxonomy ){

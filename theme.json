@@ -30,96 +30,24 @@
 			"gradients": [],
 			"link": false,
 			"palette": [
-				{
-				  "color": "inherit",
-				  "name": "Inherit",
-				  "slug": "inherit"
-				},
-				{
-				  "color": "currentcolor",
-				  "name": "Current",
-				  "slug": "current"
-				},
-				{
-				  "color": "transparent",
-				  "name": "Transparent",
-				  "slug": "transparent"
-				},
-				{
-					"color": "#000000",
-					"name": "Foreground",
-					"slug": "foreground"
-				},
-				{
-					"color": "#ffffff",
-					"name": "Background",
-					"slug": "background"
-				},
-				{
-					"color": "#2E2E3A",
-					"name": "Primary",
-					"slug": "primary"
-				},
-				{
-					"color": "#BB5D2F",
-					"name": "Secondary",
-					"slug": "secondary"
-				},
-				{
-					"color": "#DBBCA7",
-					"name": "Tertiary",
-					"slug": "tertiary"
-				},
-				{
-					"color": "#DF9151",
-					"name": "Quaternary",
-					"slug": "quaternary"
-				},
-				{
-					"color": "#F00",
-					"name": "Quinary",
-					"slug": "quinary"
-				},
-				{
-					"color": "#F00",
-					"name": "Senary",
-					"slug": "senary"
-				},
-				{
-					"color": "#F00",
-					"name": "Septenary",
-					"slug": "septenary"
-				},
-				{
-					"color": "#F00",
-					"name": "Octonary",
-					"slug": "octonary"
-				},
-				{
-					"color": "#F00",
-					"name": "Nonary",
-					"slug": "nonary"
-				},
-				{
-					"color": "#F00",
-					"name": "Denary",
-					"slug": "denary"
-				},
-				{
-					"color": "#595959",
-					"name": "Dark gray",
-					"slug": "dark-gray"
-				},
-				{
-					"color": "#919191",
-					"name": "Medium gray",
-					"slug": "medium-gray"
-				},
-				{
-					"color": "#F5F5F5",
-					"name": "Light gray",
-					"slug": "light-gray"
-				}
+				{"color": "inherit",		"name": "Inherit",		"slug": "inherit"},
+				{"color": "currentcolor",	"name": "Current",		"slug": "current"},
+				{"color": "transparent",	"name": "Transparent",	"slug": "transparent"},
+				{"color": "#000000",		"name": "Foreground",	"slug": "foreground"},
+				{"color": "#ffffff",		"name": "Background",	"slug": "background"},
+				{"color": "#2E2E3A",		"name": "Primary",		"slug": "primary"},
+				{"color": "#BB5D2F",		"name": "Secondary",	"slug": "secondary"},
+				{"color": "#DBBCA7",		"name": "Tertiary",		"slug": "tertiary"},
+				{"color": "#DF9151",		"name": "Quaternary",	"slug": "quaternary"},
+				{"color": "#F00",			"name": "Quinary",		"slug": "quinary"},
+				{"color": "#F00",			"name": "Senary",		"slug": "senary"},
+				{"color": "#F00",			"name": "Septenary",	"slug": "septenary"},
+				{"color": "#F00",			"name": "Octonary",		"slug": "octonary"},
+				{"color": "#F00",			"name": "Nonary",		"slug": "nonary"},
+				{"color": "#F00",			"name": "Denary",		"slug": "denary"},
+				{"color": "#595959",		"name": "Dark gray",	"slug": "dark-gray"},
+				{"color": "#919191",		"name": "Medium gray",	"slug": "medium-gray"},
+				{"color": "#F5F5F5",		"name": "Light gray",	"slug": "light-gray"}
 			]
 		},
 		"custom": {
@@ -159,14 +87,7 @@
 			"blockGap": false,
 			"margin": false,
 			"padding": false,
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
 			"customFontSize": false,
@@ -186,66 +107,18 @@
 				}
 			],
 			"fontSizes": [
-				{
-					"name": "Extra Small",
-					"size": "0.75rem",
-					"slug": "x-small"
-				},
-				{
-					"name": "Small",
-					"size": "0.875rem",
-					"slug": "small"
-				},
-				{
-				  "name": "Base",
-				  "size": "1rem",
-				  "slug": "base"
-				},
-				{
-					"name": "Medium",
-					"size": "1.125rem",
-					"slug": "medium"
-				},
-				{
-					"name": "Large",
-					"size": "1.25rem",
-					"slug": "large"
-				},
-				{
-					"name": "Extra Large",
-					"size": "clamp(1.5rem, 2.8vw, 1.75rem)",
-					"slug": "x-large"
-				},
-				{
-					"name": "Heading 1",
-					"size": "clamp(2.75rem, 5.2vw, 3.25rem)",
-					"slug": "heading-1"
-				},
-				{
-					"name": "Heading 2",
-					"size": "clamp(2.5rem, 4.8vw, 3rem)",
-					"slug": "heading-2"
-				},
-				{
-					"name": "Heading 3",
-					"size": "clamp(2.125rem, 4.4vw, 2.75rem)",
-					"slug": "heading-3"
-				},
-				{
-					"name": "Heading 4",
-					"size": "clamp(2rem, 4vw, 2.5rem)",
-					"slug": "heading-4"
-				},
-				{
-					"name": "Heading 5",
-					"size": "clamp(1.875rem, 3.6vw, 2.25rem)",
-					"slug": "heading-5"
-				},
-				{
-					"name": "Heading 6",
-					"size": "clamp(1.75rem, 3.2vw, 2rem)",
-					"slug": "heading-6"
-				}
+				{"name": "Extra Small",		"size": "0.75rem",							"slug": "x-small"},
+				{"name": "Small",			"size": "0.875rem",							"slug": "small"},
+				{"name": "Base",			"size": "1rem",								"slug": "base"},
+				{"name": "Medium",			"size": "1.125rem",							"slug": "medium"},
+				{"name": "Large",			"size": "1.25rem",							"slug": "large"},
+				{"name": "Extra Large",		"size": "clamp(1.5rem, 2.8vw, 1.75rem)",	"slug": "x-large"},
+				{"name": "Heading 1",		"size": "clamp(2.75rem, 5.2vw, 3.25rem)",	"slug": "heading-1"},
+				{"name": "Heading 2",		"size": "clamp(2.5rem, 4.8vw, 3rem)",		"slug": "heading-2"},
+				{"name": "Heading 3",		"size": "clamp(2.125rem, 4.4vw, 2.75rem)",	"slug": "heading-3"},
+				{"name": "Heading 4",		"size": "clamp(2rem, 4vw, 2.5rem)",			"slug": "heading-4"},
+				{"name": "Heading 5",		"size": "clamp(1.875rem, 3.6vw, 2.25rem)",	"slug": "heading-5"},
+				{"name": "Heading 6",		"size": "clamp(1.75rem, 3.2vw, 2rem)",		"slug": "heading-6"}
 			]
 		}
 	},

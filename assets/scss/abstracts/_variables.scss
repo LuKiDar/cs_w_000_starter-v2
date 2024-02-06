@@ -1,0 +1,86 @@
+/**
+ * Variables
+ */
+
+/*** Grid and breakpoints ***/
+$columns:			12;
+$column_width:		70px;
+$gutter:			30px;
+$containerWidth:	$column_width*$columns + $gutter*($columns + 1);
+
+$breakpoints: (
+	xs: 551,
+	sm: 769,
+	md: 1025,
+	lg: 1201,
+	xl: 1366
+);
+$mobileBreakpoint:	'md';
+
+
+/*** Colors ***/
+$foreground:	var(--wp--preset--color--foreground);
+$background:	var(--wp--preset--color--background);
+$primary:		var(--wp--preset--color--primary);
+$secondary:		var(--wp--preset--color--secondary);
+$tertiary:		var(--wp--preset--color--tertiary);
+$quaternary:	var(--wp--preset--color--quaternary);
+$quinary:		var(--wp--preset--color--quinary);
+$senary:		var(--wp--preset--color--senary);
+$septenary:		var(--wp--preset--color--septenary);
+$octonary:		var(--wp--preset--color--octonary);
+$nonary:		var(--wp--preset--color--nonary);
+$denary:		var(--wp--preset--color--denary);
+$dark_gray:		var(--wp--preset--color--dark-gray);
+$medium_gray:	var(--wp--preset--color--medium-gray);
+$light_gray:	var(--wp--preset--color--light-gray);
+
+// Functional colors
+$focus:		#0072C5;
+$success:	#009F53;
+$error:		#E2001B;
+
+
+/*** Typography ***/
+$primary_font:		var(--wp--preset--font-family--system-sans-serif);
+$secondary_font:	var(--wp--preset--font-family--system-serif);
+
+$lineheight_default: var(--wp--custom--line-height--default);
+
+$fweight_thin:			100;
+$fweight_extra_light:	200;
+$fweight_light:			300;
+$fweight_regular:		400;
+$fweight_medium:		500;
+$fweight_semi_bold:		600;
+$fweight_bold:			700;
+$fweight_extra_black:	800;
+$fweight_black:			900;
+
+$fsize_xsmall:		var(--wp--preset--font-size--x-small);
+$fsize_small:		var(--wp--preset--font-size--small);
+$fsize_base:		var(--wp--preset--font-size--base);
+$fsize_medium:		var(--wp--preset--font-size--medium);
+$fsize_large:		var(--wp--preset--font-size--large);
+$fsize_xlarge:		var(--wp--preset--font-size--x-large);
+$fsize_h1:			var(--wp--preset--font-size--heading-1);
+$fsize_h2:			var(--wp--preset--font-size--heading-2);
+$fsize_h3:			var(--wp--preset--font-size--heading-3);
+$fsize_h4:			var(--wp--preset--font-size--heading-4);
+$fsize_h5:			var(--wp--preset--font-size--heading-5);
+$fsize_h6:			var(--wp--preset--font-size--heading-6);
+
+
+/*** Content ***/
+// Focus
+$focus_default: 0px 0px 0px 2px $white, 0px 0px 0px 4px $focus, 0px 0px 6px 5px rgba($focus, .6);
+
+// Header
+$header_height: (
+	default: 80px,
+	$mobileBreakpoint: 70px
+);
+$header_logoWidth: (
+	default: 275px,
+	$mobileBreakpoint: 200px
+);
