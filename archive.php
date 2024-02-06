@@ -3,7 +3,7 @@
 <div class="news-feed container">
     <header class="news-feed__header grid grid--1">
         <div class="col">
-            <h1 class="news-feed__title"><?php _e('Latest Posts', CSWP); ?></h1>
+            <h1 class="news-feed__title"><?= get_the_archive_title(); ?></h1>
         </div>
     </header>
 
@@ -28,6 +28,6 @@
             <?php cs__the_pagination(); ?>
         </div>
     </footer>
-</div>
+</section>
 
 <?php get_footer(); ?>

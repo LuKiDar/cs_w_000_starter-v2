@@ -68,14 +68,6 @@ body {
 		}
 	}
 
-	&.is-header-fixed {
-		padding-top: map-get($header_height, 'default');
-	
-		@include mediaMaxWidth( $mobileBreakpoint ){
-			padding-top: map-get($header_height, $mobileBreakpoint);
-		}
-	}
-
 	body.admin-bar & {
 		min-height: calc(100vh - 32px);
 
@@ -84,6 +76,13 @@ body {
 		}
 		@include mediaMaxWidth( 600 ){
 			min-height: 100vh;
+		}
+	}
+	body.is-header-fixed & {
+		padding-top: map-get($header_height, 'default');
+	
+		@include mediaMaxWidth( $mobileBreakpoint ){
+			padding-top: map-get($header_height, $mobileBreakpoint);
 		}
 	}
 }

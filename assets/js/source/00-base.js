@@ -7,7 +7,7 @@
 
 	/*** Header ***/
 	document.addEventListener('DOMContentLoaded', function (){
-		document.getElementById('toggle').addEventListener('click', function (e){
+		document.getElementById('navbar-toggle').addEventListener('click', function (e){
 			document.body.classList.toggle('is-menu-active');
 		});
 	});

@@ -59,6 +59,7 @@ function cs__clean_body_classes( $classes ){
 		'admin-bar',
 		'logged-in',
 		'wp-embed-responsive',
+		'is-header-fixed'
 	];
 
 	return array_intersect($classes, $allowed_classes);

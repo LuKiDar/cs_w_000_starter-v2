@@ -1,0 +1,16 @@
+/**
+ * Default template
+ */
+
+.default-page {
+    padding-bottom: $default_page__padding_bottom;
+    padding-top: $default_page__padding_top;
+
+    &__header {
+        margin-bottom: 60px;
+    }
+    &__title {
+        border-bottom: 1px solid $dark_gray;
+        padding-bottom: 15px;
+    }
+}

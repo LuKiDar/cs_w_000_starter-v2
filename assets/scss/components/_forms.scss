@@ -181,8 +181,8 @@ textarea {
 	//     &-input,
 	//     &-button {
 	//         @include mediaMinWidth( xs ){
-	//             flex: 0 0 calc(50% - $layout_padding);
-	//             width: calc(50% - $layout_padding);
+	//             flex: 0 0 calc(50% - #{$layout_padding});
+	//             width: calc(50% - #{$layout_padding});
 	//         }
 	//         @include mediaMaxWidth( xs ){
 	//             flex: 0 0 100%;
@@ -414,7 +414,7 @@ textarea {
 		background-color: $light_gray; // #F5F7FA, gray
 		border-top: 4px solid $focus; // #4FC1E9, blue
 		margin: 15px 0 0;
-		padding: $layout_padding $layout_padding $layout_padding calc($layout_padding * 2 + 20px);
+		padding: $layout_padding $layout_padding $layout_padding calc(#{$layout_padding} * 2 + 20px);
 		position: relative;
 
 		&::before {
@@ -522,7 +522,7 @@ textarea {
 		white-space: nowrap;
 
 		@include mediaMinWidth( xs ){
-			margin-left: calc($layout_padding * 2);
+			margin-left: calc(#{$layout_padding} * 2);
 		}
 		@include mediaMaxWidth( xs ){
 			margin-left: $layout_padding;

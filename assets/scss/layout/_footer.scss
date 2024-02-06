@@ -1,0 +1,11 @@
+/**
+ * Footer
+ */
+
+.site-footer {
+	background: $dark_gray;
+	color: $background;
+	margin-top: auto; /* sticky footer */
+	padding: calc(#{$layout_padding} * 2) 0;
+	width: 100%;
+}

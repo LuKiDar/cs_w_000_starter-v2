@@ -79,10 +79,16 @@ $focus_default: 0px 0px 0px 2px $background, 0px 0px 0px 4px $focus, 0px 0px 6px
 
 // Header
 $header_height: (
-	default: 80px,
-	$mobileBreakpoint: 70px
+	default: rem(80),
+	$mobileBreakpoint: rem(70)
 );
 $header_logoWidth: (
-	default: 275px,
-	$mobileBreakpoint: 200px
+	default: rem(275),
+	$mobileBreakpoint: rem(200)
 );
+$header_boxShadow: 0px 4px 16px rgba(2, 82, 140, 0.1);
+$header_menuTransition: .4s;
+
+// Default page
+$default_page__padding_bottom: 3.5rem;
+$default_page__padding_top: 3.5rem;

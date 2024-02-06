@@ -26,8 +26,8 @@
 .grid {
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: -$layout_padding;
-	margin-right: -$layout_padding;
+	margin-left: calc(#{$layout_padding} * -1);
+	margin-right: calc(#{$layout_padding} * -1);
 
 	&--ai-start {
 		align-items: flex-start;

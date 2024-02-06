@@ -28,3 +28,12 @@
 /************ Layout ************/
 @import 'layout/header';
 @import 'layout/footer';
+
+// Content
+@import 'layout/content/post-card';
+
+// Templates
+@import 'layout/templates/404';
+@import 'layout/templates/blog';
+@import 'layout/templates/front-page';
+@import 'layout/templates/page';

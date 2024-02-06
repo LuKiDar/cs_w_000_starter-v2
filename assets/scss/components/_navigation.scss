@@ -76,7 +76,7 @@
                 top: 100%;
                 transform: translateX(-50%);
                 transition: opacity .2s;
-                width: calc($layout_padding * 2 + 200px);
+                width: calc(#{$layout_padding} * 2 + 200px);
                 z-index: -1;
             }
 
