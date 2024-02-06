@@ -3,160 +3,160 @@
  */
 
 .container {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: #{$containerWidth};
+	display: grid;
+	grid-template-columns:
+		[full-start] minmax(#{$layout_padding}, 1fr)
+		[wide-start] minmax(0, #{$layout_breakout})
+		[content-start] minmax(min(100% - #{$layout_padding}*2, #{$layout_content}), 1fr) [content-end]
+		minmax(0, #{$layout_breakout}) [wide-end]
+		minmax(#{$layout_padding}, 1fr) [full-end];
+	margin: 0 auto;
 
-    @include mediaMinWidth($mobileBreakpoint){
-        padding-left: #{$gutter/2};
-        padding-right: #{$gutter/2};
-    }
+	> *:not(.alignwide):not(.alignfull) {
+		grid-column: content;
+	}
+	> .alignwide {
+		grid-column: wide;
+	}
+	> .alignfull {
+		grid-column: full;
+	}
+}
 
-    // @include mediaBetween(xs,md){
-    //     max-width: 700px;
-    // }
-    // @include mediaMaxWidth(xs){
-    //     max-width: 350px;
-    // }
+.grid {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: calc(-1 * #{$layout_padding});
+	margin-right: calc(-1 * #{$layout_padding});
 
-    & & {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    & .col & {
-        margin-left: #{-$gutter/2};
-        margin-right: #{-$gutter/2};
-    }
-    &--ai-start {
-        align-items: flex-start;
-    }
-    &--ai-center {
-        align-items: center;
-    }
-    &--ai-end {
-        align-items: flex-end;
-    }
-    &--jc-start {
-        justify-content: flex-start;
-    }
-    &--jc-center {
-        justify-content: center;
-    }
-    &--jc-end {
-        justify-content: flex-end;
-    }
+	&--ai-start {
+		align-items: flex-start;
+	}
+	&--ai-center {
+		align-items: center;
+	}
+	&--ai-end {
+		align-items: flex-end;
+	}
+	&--jc-start {
+		justify-content: flex-start;
+	}
+	&--jc-center {
+		justify-content: center;
+	}
+	&--jc-end {
+		justify-content: flex-end;
+	}
 
-    // .container--*
-    @for $i from 1 through $columns {
-        &--#{$i} > .col {
-            flex: 0 0 (100%/$i);
-            max-width: (100%/$i);
-        }
-    }
-    // .container--xl-*
-    @include mediaBetween(lg,xl){
-        @for $i from 1 through $columns {
-            &--xl-#{$i} > .col {
-                flex: 0 0 (100%/$i);
-                max-width: (100%/$i);
-            }
-        }
-    }
-    // .container--lg-*
-    @include mediaBetween(md,lg){
-        @for $i from 1 through $columns {
-            &--lg-#{$i} > .col {
-                flex: 0 0 (100%/$i);
-                max-width: (100%/$i);
-            }
-        }
-    }
-    // .container--md-*
-    @include mediaBetween(sm,md){
-        @for $i from 1 through $columns {
-            &--md-#{$i} > .col {
-                flex: 0 0 (100%/$i);
-                max-width: (100%/$i);
-            }
-        }
-    }
-    // .container--sm-*
-    @include mediaBetween(xs,sm){
-        @for $i from 1 through $columns {
-            &--sm-#{$i} > .col {
-                flex: 0 0 (100%/$i);
-                max-width: (100%/$i);
-            }
-        }
-    }
-    // .container--xs-*
-    @include mediaMaxWidth(xs){
-        @for $i from 1 through $columns {
-            &--xs-#{$i} > .col {
-                flex: 0 0 (100%/$i);
-                max-width: (100%/$i);
-            }
-        }
-    }
+	// .container--*
+	@for $i from 1 through $layout_columns {
+		&--#{$i} > .col {
+			flex: 0 0 (100%/$i);
+			max-width: (100%/$i);
+		}
+	}
+	// .container--xl-*
+	@include mediaBetween(lg,xl){
+		@for $i from 1 through $layout_columns {
+			&--xl-#{$i} > .col {
+				flex: 0 0 (100%/$i);
+				max-width: (100%/$i);
+			}
+		}
+	}
+	// .container--lg-*
+	@include mediaBetween(md,lg){
+		@for $i from 1 through $layout_columns {
+			&--lg-#{$i} > .col {
+				flex: 0 0 (100%/$i);
+				max-width: (100%/$i);
+			}
+		}
+	}
+	// .container--md-*
+	@include mediaBetween(sm,md){
+		@for $i from 1 through $layout_columns {
+			&--md-#{$i} > .col {
+				flex: 0 0 (100%/$i);
+				max-width: (100%/$i);
+			}
+		}
+	}
+	// .container--sm-*
+	@include mediaBetween(xs,sm){
+		@for $i from 1 through $layout_columns {
+			&--sm-#{$i} > .col {
+				flex: 0 0 (100%/$i);
+				max-width: (100%/$i);
+			}
+		}
+	}
+	// .container--xs-*
+	@include mediaMaxWidth(xs){
+		@for $i from 1 through $layout_columns {
+			&--xs-#{$i} > .col {
+				flex: 0 0 (100%/$i);
+				max-width: (100%/$i);
+			}
+		}
+	}
 }
 .col {
-    flex: 1 0 auto;
-    max-width: 100%;
-    padding-left: $gutter/2;
-    padding-right: $gutter/2;
+	flex: 1 0 auto;
+	max-width: 100%;
+	padding-left: $layout_padding;
+	padding-right: $layout_padding;
 
-    // .col--*
-    @for $i from 1 through $columns {
-        &--#{$i} {
-            flex: 0 0 (100%/$columns*$i);
-            max-width: (100%/$columns*$i);
-        }
-    }
-    // .col--xl-*
-    @include mediaBetween(lg,xl){
-        @for $i from 1 through $columns {
-            &--xl-#{$i} {
-                flex: 0 0 (100%/$columns*$i);
-                max-width: (100%/$columns*$i);
-            }
-        }
-    }
-    // .col--lg-*
-    @include mediaBetween(md,lg){
-        @for $i from 1 through $columns {
-            &--lg-#{$i} {
-                flex: 0 0 (100%/$columns*$i);
-                max-width: (100%/$columns*$i);
-            }
-        }
-    }
-    // .col--md-*
-    @include mediaBetween(sm,md){
-        @for $i from 1 through $columns {
-            &--md-#{$i} {
-                flex: 0 0 (100%/$columns*$i);
-                max-width: (100%/$columns*$i);
-            }
-        }
-    }
-    // .col--sm-*
-    @include mediaBetween(xs,sm){
-        @for $i from 1 through $columns {
-            &--sm-#{$i} {
-                flex: 0 0 (100%/$columns*$i);
-                max-width: (100%/$columns*$i);
-            }
-        }
-    }
-    // .col--xs-*
-    @include mediaMaxWidth(xs){
-        @for $i from 1 through $columns {
-            &--xs-#{$i} {
-                flex: 0 0 (100%/$columns*$i);
-                max-width: (100%/$columns*$i);
-            }
-        }
-    }
+	// .col--*
+	@for $i from 1 through $layout_columns {
+		&--#{$i} {
+			flex: 0 0 (100%/$layout_columns*$i);
+			max-width: (100%/$layout_columns*$i);
+		}
+	}
+	// .col--xl-*
+	@include mediaBetween(lg,xl){
+		@for $i from 1 through $layout_columns {
+			&--xl-#{$i} {
+				flex: 0 0 (100%/$layout_columns*$i);
+				max-width: (100%/$layout_columns*$i);
+			}
+		}
+	}
+	// .col--lg-*
+	@include mediaBetween(md,lg){
+		@for $i from 1 through $layout_columns {
+			&--lg-#{$i} {
+				flex: 0 0 (100%/$layout_columns*$i);
+				max-width: (100%/$layout_columns*$i);
+			}
+		}
+	}
+	// .col--md-*
+	@include mediaBetween(sm,md){
+		@for $i from 1 through $layout_columns {
+			&--md-#{$i} {
+				flex: 0 0 (100%/$layout_columns*$i);
+				max-width: (100%/$layout_columns*$i);
+			}
+		}
+	}
+	// .col--sm-*
+	@include mediaBetween(xs,sm){
+		@for $i from 1 through $layout_columns {
+			&--sm-#{$i} {
+				flex: 0 0 (100%/$layout_columns*$i);
+				max-width: (100%/$layout_columns*$i);
+			}
+		}
+	}
+	// .col--xs-*
+	@include mediaMaxWidth(xs){
+		@for $i from 1 through $layout_columns {
+			&--xs-#{$i} {
+				flex: 0 0 (100%/$layout_columns*$i);
+				max-width: (100%/$layout_columns*$i);
+			}
+		}
+	}
 }

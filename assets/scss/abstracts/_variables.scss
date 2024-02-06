@@ -3,10 +3,11 @@
  */
 
 /*** Grid and breakpoints ***/
-$columns:			12;
-$column_width:		70px;
-$gutter:			30px;
-$containerWidth:	$column_width*$columns + $gutter*($columns + 1);
+$layout_columns:		12;
+$layout_padding:		var(--wp--custom--layout--padding);
+$layout_content:		var(--wp--custom--layout--content);
+$layout_wide:			var(--wp--custom--layout--wide);
+$layout_breakout:		calc((var(--wp--custom--layout--wide) - var(--wp--custom--layout--content)) / 2);
 
 $breakpoints: (
 	xs: 551,

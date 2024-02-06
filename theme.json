@@ -64,13 +64,12 @@
 				"link" : "#0000EE"
 			},
 			"layout": {
-				"content": "800px",
-				"wide": "1200px",
-				"sidebar": "336px",
+				"padding": "1rem",
+				"content": "75rem",
+				"wide": "87.5rem",
 				"page": "var(--wp--custom--layout--content)",
-				"padding": "16px",
-				"block-gap": "16px",
-				"block-gap-large": "40px"
+				"block-gap": "var(--wp--custom--layout--padding)",
+				"block-gap-large": "calc(var(--wp--custom--layout--padding) * 2)"
 			},
 			"letter-spacing": {
 				"none": "normal"

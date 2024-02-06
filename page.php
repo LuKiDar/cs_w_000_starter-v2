@@ -2,14 +2,18 @@
 
 <div class="default-page">
     <div class="container">
-        <header class="default-page__header col col--12">
+        <header class="default-page__header">
             <h1 class="default-page__title"><?= get_the_title(); ?></h1>
         </header>
         
+        <div class="grid">
+            <div class="col col--3">col</div>
+            <div class="col col--6">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
         <?php while ( have_posts() ): the_post(); ?>
-            <div class="col col--12">
-                <?php the_content(); ?>
-            </div>
+            <?php the_content(); ?>
         <?php endwhile; ?>
     </div>
 </div>
