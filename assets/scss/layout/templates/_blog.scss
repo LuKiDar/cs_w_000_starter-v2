@@ -8,8 +8,8 @@
 
 	&__title {
 		border-bottom: 1px solid $dark_gray;
-		margin-bottom: 60px;
-		padding-bottom: 15px;
+		margin-bottom: rem(60);
+		padding-bottom: rem(15);
 	}
 	&__item {
 		padding-bottom: calc(#{$layout_padding} * 2);

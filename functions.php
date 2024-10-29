@@ -1,13 +1,13 @@
 <?php
-define('CSWP', 'cswp');
+/**
+ * Theme functions and definitions
+ */
 
 // Constants
+define('CSWP', 'cswp');
 include 'inc/constants.php';
 
-/*------------------------------------*\
-	Theme Support
-\*------------------------------------*/
-
+/*** Theme Support ***/
 if ( function_exists('add_theme_support') ){
 	add_theme_support('custom-logo', array(
 		'height'      => '200',
@@ -40,11 +40,7 @@ register_nav_menus(array(
 ));
 
 
-/*------------------------------------*\
-	Actions + Filters
-\*------------------------------------*/
-
-/*** Add Filters ***/
+/*** Actions + Filters ***/
 add_filter('get_custom_logo', function( $html ){ // Change custom logo class
 	$html = str_replace('custom-logo-link', 'logo', $html);
 	$html = str_replace('custom-logo', 'logo__image', $html);
@@ -57,11 +53,15 @@ require_once 'inc/helper-functions.php';
 require_once 'inc/wordpress-cleanup.php';
 
 // Functionality
-include_once 'inc/admin.php';
 require_once 'inc/blocks.php';
-// include_once 'inc/pagination.php';
+include_once 'inc/admin.php';
 require_once 'inc/post-types.php';
+// require_once 'inc/breadcrumbs.php';
+// require_once 'inc/menu-walker.php';
+// include_once 'inc/pagination.php';
+// require_once 'inc/post-types.php';
 // include_once 'inc/shortcodes.php';
+// require_once 'inc/widgets.php';
 
 // Plugin support
 require_once 'inc/acf.php';

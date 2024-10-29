@@ -6,7 +6,7 @@
 	$c: &;
 
 	&__media-wrap {
-		margin: 0 0 25px;
+		margin: 0 0 rem(25);
 		overflow: hidden;
 		position: relative;
 
@@ -48,7 +48,7 @@
 		color: $medium_gray;
 		font-size: $fontSize_small;
 		list-style: none;
-		margin: 0 0 5px;
+		margin: 0 0 rem(5);
 		padding: 0;
 
 		li {
@@ -56,7 +56,7 @@
 
 			&::after {
 				content: '|';
-				margin: 0 10px;
+				margin: 0 rem(10);
 			}
 
 			&:last-child::after {
@@ -67,7 +67,7 @@
 	&__tags {
 		font-size: $fontSize_small;
 		list-style: none;
-		margin: 0 0 5px;
+		margin: 0 0 rem(5);
 		padding: 0;
 
 		li {
@@ -75,7 +75,7 @@
 
 			&::after {
 				content: '|';
-				margin: 0 10px;
+				margin: 0 rem(10);
 			}
 
 			&:last-child::after {
@@ -84,12 +84,12 @@
 		}
 	}
 	&__title {
-		margin: 0 0 15px;
+		margin: 0 0 rem(15);
 	}
 	&__excerpt {
-		margin: 20px 0 15px;
+		margin: rem(20) 0 rem(15);
 	}
 	&__navigation {
-		margin: 30px 0 0;
+		margin: rem(30) 0 0;
 	}
 }

@@ -18,7 +18,7 @@
 		text-decoration: none;
 
 		@include mediaMinWidth( md ){
-			padding: 10px 20px;
+			padding: rem(10) rem(20);
 			text-align: center;
 
 			&.is-active {
@@ -32,7 +32,7 @@
 		}
 		@include mediaMaxWidth( md ){
 			border-top: 1px solid $white;
-			padding: 14px calc(#{$layout_padding} * 2 + 25px) 14px calc(#{$layout_padding} * 2);
+			padding: rem(14) calc(#{$layout_padding} * 2 + #{rem(25)}) rem(14) calc(#{$layout_padding} * 2);
 			position: relative;
 
 			&::before,
@@ -45,14 +45,14 @@
 				transform: translateY(-50%);
 			}
 			&::before {
-				height: 2px;
+				height: rem(2);
 				right: calc(#{$layout_padding} * 2);
-				width: 14px;
+				width: rem(14);
 			}
 			&::after {
-				height: 14px;
-				right: calc(#{$layout_padding} * 2 + 6px);
-				width: 2px;
+				height: rem(14);
+				right: calc(#{$layout_padding} * 2 + #{rem(6)});
+				width: rem(2);
 			}
 
 			&.is-active {
@@ -80,10 +80,10 @@
 		margin: 0 !important;
 		
 		@include mediaMinWidth( md ){
-			padding: 35px 50px;
+			padding: rem(35) rem(50);
 		}
 		@include mediaMaxWidth( md ){
-			padding: 5px calc(#{$layout_padding} * 2) 15px;
+			padding: rem(5) calc(#{$layout_padding} * 2) rem(15);
 		}
 
 		&:not(&.is-active){

@@ -16,18 +16,18 @@
 	}
 	@include mediaMaxWidth( $mobileBreakpoint ){
 		margin: 0 auto;
-		max-width: 250px;
-		padding: 35px 0;
+		max-width: rem(250);
+		padding: rem(35) 0;
 	}
 
 	> .menu-item {
 		position: relative;
 		
 		@include mediaMinWidth( lg ){
-			padding: 0 30px;
+			padding: 0 rem(30);
 		}
 		@include mediaBetween( $mobileBreakpoint, lg ){
-			padding: 0 15px;
+			padding: 0 rem(15);
 		}
 		@include mediaMinWidth( $mobileBreakpoint ){
 			display: flex;
@@ -43,10 +43,10 @@
 			}
 		}
 		@include mediaMaxWidth( $mobileBreakpoint ){
-			padding: 5px 0;
+			padding: rem(5) 0;
 
 			> a {
-				margin: 0 0 5px;
+				margin: 0 0 rem(5);
 			}
 		}
 
@@ -74,15 +74,15 @@
 				top: 100%;
 				transform: translateX(-50%);
 				transition: opacity .2s;
-				width: calc(#{$layout_padding} * 2 + 200px);
+				width: calc(#{$layout_padding} * 2 + #{rem(200)});
 				z-index: -1;
 			}
 
 			a {
-				margin: 0 0 5px;
+				margin: 0 0 rem(5);
 			}
 			.sub-menu {
-				margin: 0 0 10px;
+				margin: 0 0 rem(10);
 
 				.sub-menu {
 					display: none;
@@ -117,7 +117,7 @@
 	padding: 0;
 
 	> .menu-item {
-		padding: 0 20px;
+		padding: 0 rem(20);
 		position: relative;
 
 		a {

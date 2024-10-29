@@ -7,10 +7,10 @@
 	padding-top: $defaultPage_paddingTop;
 
 	&__header {
-		margin-bottom: 60px;
+		margin-bottom: rem(60);
 	}
 	&__title {
 		border-bottom: 1px solid $dark_gray;
-		padding-bottom: 15px;
+		padding-bottom: rem(15);
 	}
 }

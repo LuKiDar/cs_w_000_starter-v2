@@ -2,21 +2,12 @@
  * Template / 404
  */
 
- .page-404 {
-	margin-bottom: 60px;
-	margin-top: 75px;
-
-	@include mediaBetween(xs,md){
-		margin-bottom: 40px;
-		margin-top: 40px;
-	}
-	@include mediaMaxWidth(xs){
-		margin-top: 35px;
-		margin-bottom: 25px;
-	}
+.page-404 {
+	padding-bottom: $defaultPage_paddingBottom;
+	padding-top: $defaultPage_paddingTop;
 
 	&__header {
-		margin: 0 0 40px;
+		margin: 0 0 rem(40);
 	}
 	&__title {
 		margin: 0;
@@ -26,8 +17,8 @@
 			border-bottom: 2px solid $dark_gray;
 			content: '';
 			display: block;
-			margin: 14px auto 0;
-			max-width: 180px;
+			margin: rem(14) auto 0;
+			max-width: rem(180);
 			width: 100%;
 		}
 	}

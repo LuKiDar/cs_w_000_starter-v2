@@ -25,7 +25,7 @@ select {
 	display: block;
 	font-size: 1rem;
 	outline: none;
-	padding: 12px 10px;
+	padding: rem(12) rem(10);
 	transition: color .2s;
 	width: 100%;
 
@@ -45,11 +45,11 @@ select {
 select {
 	appearance: none;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='"+ encodecolor($dark_gray) +"' viewBox='0 0 492 492'%3E%3Cpath d='m484.13 124.99-16.11-16.23a26.72 26.72 0 0 0-19.04-7.86c-7.2 0-13.96 2.79-19.03 7.86L246.1 292.6 62.06 108.55c-5.07-5.06-11.82-7.85-19.03-7.85s-13.97 2.79-19.04 7.85L7.87 124.68a26.94 26.94 0 0 0 0 38.06l219.14 219.93c5.06 5.06 11.81 8.63 19.08 8.63h.09c7.2 0 13.96-3.57 19.02-8.63l218.93-219.33A27.18 27.18 0 0 0 492 144.1c0-7.2-2.8-14.06-7.87-19.12z'/%3E%3C/svg%3E");
-	background-position: calc(100% - 10px) calc(50% + 2px);
+	background-position: calc(100% - #{rem(10)}) calc(50% + #{rem(2)});
 	background-repeat: no-repeat;
-	background-size: 15px 15px;
+	background-size: rem(15) rem(15);
 	height: auto;
-	padding-right: 30px;
+	padding-right: rem(30);
 
 	&::-ms-expand {
 		display: none;
@@ -59,11 +59,11 @@ select {
 	}
 }
 textarea {
-	height: 170px;
+	height: rem(170);
 	resize: none;
 
 	&[rows] {
-		height: 170px;
+		height: rem(170);
 	}
 }
 
@@ -80,7 +80,7 @@ textarea {
 	&__field {
 		flex: 0 0 100%;
 		max-width: 100%;
-		padding: 10px $layout_padding;
+		padding: rem(10) $layout_padding;
 		position: relative;
 
 		br {
@@ -94,23 +94,23 @@ textarea {
 			}
 		}
 		&--submit {
-			margin-top: 15px;
+			margin-top: rem(15);
 			padding: $layout_padding;
 		}
 	}
 	&__space {
 		flex: 0 0 100%;
-		height: 50px;
+		height: rem(50);
 		max-width: 100%;
 
 		@include mediaMaxWidth( sm ){
-			height: 30px;
+			height: rem(30);
 		}
 	}
 	&__label {
 		display: block;
 		font-size: $fontSize_small;
-		margin: 0 0 5px;
+		margin: 0 0 rem(5);
 	}
 	// &__file {
 	//     $file: &;
@@ -156,9 +156,9 @@ textarea {
 	//             #{$file}-button {
 	//                 @include mediaMinWidth( $mobileBreakpoint ){
 	//                     &::after {
-	//                         height: 116px;
+	//                         height: rem(116);
 	//                         opacity: 1;
-	//                         width: 116px;
+	//                         width: rem(116);
 	//                     }
 	//                 }
 	//             }
@@ -184,7 +184,7 @@ textarea {
 	//             margin-right: $layout_padding*2;
 	//         }
 	//         @include mediaMaxWidth( xs ){
-	//             margin: 0 0 20px;
+	//             margin: 0 0 rem(20);
 	//         }
 	//     }
 	//     &-button {
@@ -223,7 +223,7 @@ textarea {
 			+ span {
 				cursor: pointer;
 				display: inline-block;
-				padding: 0 0 0 30px;
+				padding: 0 0 0 rem(30);
 				position: relative;
 
 				&::before,
@@ -235,11 +235,11 @@ textarea {
 				}
 				&::before {
 					background-color: $light_gray;
-					height: 20px;
+					height: rem(20);
 					left: 0;
-					margin: 0 10px 0 0;
-					top: 2px;
-					width: 20px;
+					margin: 0 rem(10) 0 0;
+					top: rem(2);
+					width: rem(20);
 					z-index: 1;
 				}
 				&::after {
@@ -270,17 +270,17 @@ textarea {
 		input[type=radio] {
 			+ span {
 				&::before {
-					border-radius: 2px;
+					border-radius: rem(2);
 				}
 				&::after {
 					border-color: $white;
 					border-style: solid;
-					border-width: 0 3px 3px 0;
-					height: 14px;
-					left: 6px;
-					top: 3px;
+					border-width: 0 rem(3) rem(3) 0;
+					height: rem(14);
+					left: rem(6);
+					top: rem(3);
 					transform: rotate(45deg);
-					width: 8px;
+					width: rem(8);
 				}
 			}
 		}
@@ -295,10 +295,10 @@ textarea {
 				}
 				&::after {
 					background-color: $light_gray;
-					height: 10px;
-					left: 5px;
-					top: 7px;
-					width: 10px;
+					height: rem(10);
+					left: rem(5);
+					top: rem(7);
+					width: rem(10);
 				}
 			}
 		}
@@ -308,7 +308,7 @@ textarea {
 		input[type=radio] {
 			+ span {
 				font-size: $fontSize_xsmall;
-				padding-top: 3px;
+				padding-top: rem(3);
 			}
 		}
 	}
@@ -340,9 +340,9 @@ textarea {
 			border-width: 2px;
 			content: '';
 			display: inline-block;
-			height: 26px;
-			margin: 2px;
-			width: 26px;
+			height: rem(26);
+			margin: rem(2);
+			width: rem(26);
 		}
 
 		&.is-active {
@@ -354,8 +354,8 @@ textarea {
 		color: $error;
 		display: block;
 		font-size: $fontSize_xsmall;
-		margin-top: 2px;
-		padding-left: 20px;
+		margin-top: rem(2);
+		padding-left: rem(20);
 		position: relative;
 
 		&::before,
@@ -365,27 +365,27 @@ textarea {
 		}
 		&::before {
 			border-color: transparent transparent $error transparent;
-			border-radius: 2px;
+			border-radius: rem(2);
 			border-style: solid;
-			border-width: 11px 7px;
+			border-width: rem(11) rem(7);
 			content: '';
 			left: 0;
-			top: -7px;
+			top: rem(-7);
 
 			@include mediaMaxWidth( md ){
-				top: -10px;
+				top: rem(-10);
 			}
 		}
 		&::after {
 			color: $white;
 			content: '!';
-			font-size: 8px;
+			font-size: rem(8);
 			font-weight: 700;
-			left: 6px;
-			top: 4px;
+			left: rem(6);
+			top: rem(4);
 
 			@include mediaMaxWidth( md ){
-				top: 1px;
+				top: rem(1);
 			}
 		}
 	}
@@ -395,8 +395,8 @@ textarea {
 	.wpcf7-response-output {
 		background-color: $light_gray; // #F5F7FA, gray
 		border-top: 4px solid $focus; // #4FC1E9, blue
-		margin: 15px 0 0;
-		padding: $layout_padding $layout_padding $layout_padding calc(#{$layout_padding} * 2 + 20px);
+		margin: rem(15) 0 0;
+		padding: $layout_padding $layout_padding $layout_padding calc(#{$layout_padding} * 2 + #{rem(20)});
 		position: relative;
 
 		&::before {
@@ -405,15 +405,15 @@ textarea {
 			content: 'i';
 			color: $white;
 			display: inline-block;
-			font-size: 14px;
+			font-size: rem(14);
 			font-weight: 700;
 			left: $layout_padding;
-			line-height: 20px;
+			line-height: (20/14);
 			text-align: center;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			width: 20px;
+			width: rem(20);
 		}
 	}
 	form {
@@ -513,12 +513,11 @@ textarea {
 
 	&:hover {
 		#{$f}__button {
-			box-shadow: 0px 0px 10px rgba($black, 0.2);
+			box-shadow: 0 0 rem(10) rgba($black, 0.2);
 			text-decoration: underline;
 		}
 	}
-	input[type=file]:focus ~ &__button {
-	}
+	input[type=file]:focus ~ &__button {}
 }
 
 
@@ -534,10 +533,10 @@ textarea {
 	&__title {
 		background-color: $white;
 		border: 1px solid $dark_gray;
-		border-radius: 5px;
+		border-radius: rem(5);
 		cursor: pointer;
 		display: block;
-		padding: 10px 49px 10px 19px;
+		padding: rem(10) rem(49) rem(10) rem(19);
 		position: relative;
 		transition: border .2s, color .2s;
 		width: 100%;
@@ -550,27 +549,27 @@ textarea {
 			content: '';
 			display: block;
 			filter: brightness(0);
-			height: 15px;
-			margin-top: 2px;
+			height: rem(15);
+			margin-top: rem(2);
 			opacity: 0.5;
 			position: absolute;
-			right: 20px;
+			right: rem(20);
 			top: 50%;
 			transform: translateY(-50%);
 			transition: filter .2s, opacity .2s;
-			width: 15px;
+			width: rem(15);
 			z-index: 2;
 		}
 	}
 	&__list {
 		background: $white;
 		border: 1px solid $dark_gray;
-		border-radius: 0 0 5px 5px;
+		border-radius: 0 0 rem(5) rem(5);
 		border-top: none;
 		left: 0;
 		list-style: none;
 		margin: 0;
-		max-height: 162px;
+		max-height: rem(162);
 		opacity: 0;
 		overflow-y: scroll;
 		padding: 0;
@@ -584,7 +583,7 @@ textarea {
 	&__item {
 		cursor: pointer;
 		margin: 0;
-		padding: 8px 19px;
+		padding: rem(8) rem(19);
 		transition: background .2s;
 
 		a {
@@ -622,7 +621,7 @@ textarea {
 	&.is-active {
 		#{$s}__title {
 			border-bottom-color: transparent !important;
-			border-radius: 5px 5px 0 0;
+			border-radius: rem(5) rem(5) 0 0;
 			// transition: color .2s;
 
 			&::after {
