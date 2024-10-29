@@ -1,23 +1,10 @@
 /**
  * Base 
  */
- 
-*::-webkit-media-controls-panel {
-	display: none!important;
-	-webkit-appearance: none;
-}
-*::--webkit-media-controls-play-button {
-	display: none!important;
-	-webkit-appearance: none;
-}
-*::-webkit-media-controls-start-playback-button {
-	display: none!important;
-	-webkit-appearance: none;
-}
 
 ::selection {
 	background: $medium_gray;
-	color: $background;
+	color: $white;
 }
 
 #wpadminbar * {
@@ -41,18 +28,17 @@ body {
 .site-container {
 	display: flex;
 	flex-flow: column nowrap;
-	min-height: 100vh;
-	overflow-x: hidden;
+	min-height: calc(100vh - #{$header_height});
 
 	.screen-reader-shortcut {
 		position: absolute;
 		top: -1000em;
 
 		&:focus,
-		&:focus-visible {
+		&:focus {
 			background: #f0f0f1;
 			box-shadow: 0 0 2px 2px rgb(0 0 0 / 60%);
-			color: $foreground;
+			color: $black;
 			display: block;
 			font-size: 14px;
 			font-weight: 600;
@@ -69,23 +55,16 @@ body {
 	}
 
 	body.admin-bar & {
-		min-height: calc(100vh - 32px);
+		min-height: calc(100vh - 32px - #{$header_height});
 
 		@include mediaMaxWidth( 782 ){
-			min-height: calc(100vh - 46px);
+			min-height: calc(100vh - 46px - #{$header_height});
 		}
 		@include mediaMaxWidth( 600 ){
-			min-height: 100vh;
+			min-height: calc(100vh - #{$header_height});
 		}
 	}
 	body.is-header-fixed & {
-		padding-top: map-get($header_height, 'default');
-	
-		@include mediaMaxWidth( $mobileBreakpoint ){
-			padding-top: map-get($header_height, $mobileBreakpoint);
-		}
+		padding-top: $header_height;
 	}
-}
-.site-main {
-	overflow: hidden;
 }

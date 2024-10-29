@@ -3,14 +3,14 @@
  */
 
 .default-page {
-    padding-bottom: $default_page__padding_bottom;
-    padding-top: $default_page__padding_top;
+	padding-bottom: $defaultPage_paddingBottom;
+	padding-top: $defaultPage_paddingTop;
 
-    &__header {
-        margin-bottom: 60px;
-    }
-    &__title {
-        border-bottom: 1px solid $dark_gray;
-        padding-bottom: 15px;
-    }
+	&__header {
+		margin-bottom: 60px;
+	}
+	&__title {
+		border-bottom: 1px solid $dark_gray;
+		padding-bottom: 15px;
+	}
 }

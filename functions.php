@@ -9,34 +9,34 @@ include 'inc/constants.php';
 \*------------------------------------*/
 
 if ( function_exists('add_theme_support') ){
-    add_theme_support('custom-logo', array(
-        'height'      => '200',
-        'flex-height' => true,
-        'flex-width'  => true,
-    ));
-    add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script'));
-    add_theme_support('menus');
-    add_theme_support('post-thumbnails');
-    add_theme_support('responsive-embeds');
-    add_theme_support('title-tag');
-    add_theme_support('wp-block-styles');
-    // add_theme_support('align-wide');
-    //add_theme_support('woocommerce');
+	add_theme_support('custom-logo', array(
+		'height'      => '200',
+		'flex-height' => true,
+		'flex-width'  => true,
+	));
+	add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script'));
+	add_theme_support('menus');
+	add_theme_support('post-thumbnails');
+	add_theme_support('responsive-embeds');
+	add_theme_support('title-tag');
+	add_theme_support('wp-block-styles');
+	// add_theme_support('align-wide');
+	//add_theme_support('woocommerce');
 
-    // Enable translations
-    // load_theme_textdomain('cswp', get_template_directory() . '/languages');
+	// Enable translations
+	// load_theme_textdomain('cswp', get_template_directory() . '/languages');
 }
 
 add_filter('upload_mimes', 'cs__mime_types');
 function cs__mime_types( $mimes ){
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
 }
 
 // Register Navigation
 register_nav_menus(array(
-    'primary-menu' => __('Primary Menu', CSWP),
-    'footer-menu' => __('Footer Menu', CSWP),
+	'primary-menu' => __('Primary Menu', CSWP),
+	'footer-menu' => __('Footer Menu', CSWP),
 ));
 
 

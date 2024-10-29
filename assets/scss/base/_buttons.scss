@@ -3,77 +3,67 @@
  */
 
 %btn {
-    border: 2px solid transparent;
-    border-radius: 0;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: $fweight_bold;
-    line-height: $lineheight_default;
-    min-width: 170px;
-    padding: 11px 23px !important;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    transition: background .2s, border-color .2s, box-shadow .2s, color .2s;
+	border: 1px solid;
+	border-radius: $borderRadius_small;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $fontFamily_primary;
+	font-size: $fontSize_small;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 0.5rem 1rem;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: background .2s, border-color .2s, color .2s;
 
-    &[disabled],
-    &.disabled {
-        background-color: $light_gray !important;
-        border-color: $light_gray !important;
-        box-shadow: none !important;
-        color: $background !important;
-        cursor: not-allowed;
-        outline: none !important;
-        text-decoration: none !important;
-    }
+	&[disabled],
+	&.disabled {
+		box-shadow: none !important;
+		color: $dark_gray !important;
+		cursor: not-allowed;
+		outline: none !important;
+		text-decoration: none !important;
+	}
 
-    &:focus-visible {
-        box-shadow: $focus_default;
-    }
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
 }
 
+
+.button,
 .button--fill,
 .button--outline {
-    @extend %btn;
+	@extend %btn;
 }
 
 // Fill
 .button--fill {
-    // background: $foreground;
-    // border-color: $foreground;
-    // color: $background;
+	background: $black;
+	border-color: $black;
+	color: $white;
 
-    // &:hover {
-    //     @include mediaMinWidth( $mobileBreakpoint ){
-    //         background: transparent;
-    //         border-color: $foreground;
-    //         color: $foreground;
-    //     }
-    // }
-    // &:focus-visible {
-    //     background: transparent;
-    //     border-color: $foreground;
-    //     color: $foreground;
-    // }
+	&:hover,
+	&:focus {
+		background: transparent;
+		border-color: $black;
+		color: $black;
+	}
 }
 
 // Outline
 .button--outline {
-    // background: transparent;
-    // border-color: $foreground;
-    // color: $foreground;
+	background: transparent;
+	border-color: $black;
+	color: $black;
 
-    // &:hover {
-    //     @include mediaMinWidth( $mobileBreakpoint ){
-    //         background: transparent;
-    //         border-color: $foreground;
-    //         color: $foreground;
-    //     }
-    // }
-    // &:focus-visible {
-    //     background: transparent;
-    //     border-color: $foreground;
-    //     color: $foreground;
-    // }
+	&:hover,
+	&:focus {
+		background: transparent;
+		border-color: $black;
+		color: $black;
+	}
 }

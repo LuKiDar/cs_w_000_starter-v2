@@ -9,17 +9,17 @@
 
 /*** ACF: register Options page ***/
 if ( function_exists('acf_add_options_page') ):
-    acf_add_options_page(
-        array(
-            'page_title'    => __('Theme Settings', CSWP),
-            'menu_title'    => __('Theme Settings', CSWP),
-            'menu_slug'     => 'theme-settings',
-            'capability'    => 'manage_options',
-            'position'      => '59',
-            'redirect'      => true,
-        )
-    );
-    
+	acf_add_options_page(
+		array(
+			'page_title'    => __('Theme Settings', CSWP),
+			'menu_title'    => __('Theme Settings', CSWP),
+			'menu_slug'     => 'theme-settings',
+			'capability'    => 'manage_options',
+			'position'      => '59',
+			'redirect'      => true,
+		)
+	);
+	
 	// acf_add_options_sub_page(array(
 	// 	'page_title' 	=> 'General Theme Settings',
 	// 	'menu_title'	=> 'General',

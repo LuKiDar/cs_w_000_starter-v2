@@ -7,7 +7,7 @@
 	grid-template-columns:
 		[full-start] minmax(#{$layout_padding}, 1fr)
 		[wide-start] minmax(0, #{$layout_breakout})
-		[content-start] minmax(min(100% - #{$layout_padding}*2, #{$layout_content}), 1fr) [content-end]
+		[content-start] minmax(min(100% - #{$layout_padding} * 4, #{$layout_content}), 1fr) [content-end]
 		minmax(0, #{$layout_breakout}) [wide-end]
 		minmax(#{$layout_padding}, 1fr) [full-end];
 	margin: 0 auto;

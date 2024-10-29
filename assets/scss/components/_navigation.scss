@@ -4,148 +4,144 @@
 
 /*** Primary menu ***/
 .primary-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
-    @include mediaMinWidth( $mobileBreakpoint ){
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        height: inherit;
-    }
-    @include mediaMaxWidth( $mobileBreakpoint ){
-        margin: 0 auto;
-        max-width: 250px;
-        padding: 35px 0;
-    }
+	@include mediaMinWidth( $mobileBreakpoint ){
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+		height: inherit;
+	}
+	@include mediaMaxWidth( $mobileBreakpoint ){
+		margin: 0 auto;
+		max-width: 250px;
+		padding: 35px 0;
+	}
 
-    > .menu-item {
-        position: relative;
-        
-        @include mediaMinWidth( lg ){
-            padding: 0 30px;
-        }
-        @include mediaBetween( $mobileBreakpoint, lg ){
-            padding: 0 15px;
-        }
-        @include mediaMinWidth( $mobileBreakpoint ){
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            height: inherit;
+	> .menu-item {
+		position: relative;
+		
+		@include mediaMinWidth( lg ){
+			padding: 0 30px;
+		}
+		@include mediaBetween( $mobileBreakpoint, lg ){
+			padding: 0 15px;
+		}
+		@include mediaMinWidth( $mobileBreakpoint ){
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			height: inherit;
 
-            &:first-child {
-                padding-left: 0;
-            }
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-        @include mediaMaxWidth( $mobileBreakpoint ){
-            padding: 5px 0;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+		@include mediaMaxWidth( $mobileBreakpoint ){
+			padding: 5px 0;
 
-            > a {
-                margin: 0 0 5px;
-            }
-        }
+			> a {
+				margin: 0 0 5px;
+			}
+		}
 
-        a {
-            color: $foreground;
-            display: inline-block;
-            text-decoration: none;
+		a {
+			color: $black;
+			display: inline-block;
+			text-decoration: none;
 
-            &:hover,
-            &:focus {
-                @include mediaMinWidth( $mobileBreakpoint ){
-                    color: $primary;
-                }
-            }
-        }
-        > .sub-menu {
-            list-style: none;
-            margin: 0;
+			&:hover,
+			&:focus {
+				color: $primary;
+			}
+		}
+		> .sub-menu {
+			list-style: none;
+			margin: 0;
 
-            @include mediaMinWidth( $mobileBreakpoint ){
-                background: $background;
-                border-top: 1px solid $dark_gray;
-                display: none;
-                left: 50%;
-                padding: $layout_padding;
-                position: absolute;
-                top: 100%;
-                transform: translateX(-50%);
-                transition: opacity .2s;
-                width: calc(#{$layout_padding} * 2 + 200px);
-                z-index: -1;
-            }
+			@include mediaMinWidth( $mobileBreakpoint ){
+				background: $white;
+				border-top: 1px solid $dark_gray;
+				display: none;
+				left: 50%;
+				padding: $layout_padding;
+				position: absolute;
+				top: 100%;
+				transform: translateX(-50%);
+				transition: opacity .2s;
+				width: calc(#{$layout_padding} * 2 + 200px);
+				z-index: -1;
+			}
 
-            a {
-                margin: 0 0 5px;
-            }
-            .sub-menu {
-                margin: 0 0 10px;
+			a {
+				margin: 0 0 5px;
+			}
+			.sub-menu {
+				margin: 0 0 10px;
 
-                .sub-menu {
-                    display: none;
-                }
-            }
-        }
-        
-        &.menu-item-has-children {
-            &:hover {
-                > .sub-menu {
-                    @include mediaMinWidth( $mobileBreakpoint ){
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-    .menu-item.current-menu-item {
-        > a {
-            font-weight: $fweight_bold;
-        }
-    }
+				.sub-menu {
+					display: none;
+				}
+			}
+		}
+		
+		&.menu-item-has-children {
+			&:hover {
+				> .sub-menu {
+					@include mediaMinWidth( $mobileBreakpoint ){
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.menu-item.current-menu-item {
+		> a {
+			font-weight: 700;
+		}
+	}
 }
 
 
 /*** Footer menu ***/
 .footer-menu {
-    display: flex;
-    flex-flow: row wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 
-    > .menu-item {
-        padding: 0 20px;
-        position: relative;
+	> .menu-item {
+		padding: 0 20px;
+		position: relative;
 
-        a {
-            color: $background;
-            text-decoration: none;
+		a {
+			color: $white;
+			text-decoration: none;
 
-            &:hover,
-            &:focus {
-                @include mediaMinWidth( $mobileBreakpoint ){
-                    color: $primary;
-                }
-            }
-        }
-        > .sub-menu {
-            display: none !important;
-        }
+			&:hover,
+			&:focus {
+				color: $primary;
+			}
+		}
+		> .sub-menu {
+			display: none !important;
+		}
 
-        &.current-menu-item {
-            font-weight: $fweight_bold;
-        }
+		&.current-menu-item {
+			font-weight: 700;
+		}
 
-        &:first-child {
-            padding-left: 0;
-        }
-        &:last-child {
-            padding-right: 0;
-        }
-    }
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
 }

@@ -3,16 +3,16 @@
  */
 
 .news-feed {
-    padding-bottom: $default_page__padding_bottom;
-    padding-top: $default_page__padding_top;
+	padding-bottom: $defaultPage_paddingBottom;
+	padding-top: $defaultPage_paddingTop;
 
-    &__title {
-        border-bottom: 1px solid $dark_gray;
-        margin-bottom: 60px;
-        padding-bottom: 15px;
-    }
-    &__item {
-        padding-bottom: calc(#{$layout_padding} * 2);
-        padding-top: calc(#{$layout_padding} * 2);
-    }
+	&__title {
+		border-bottom: 1px solid $dark_gray;
+		margin-bottom: 60px;
+		padding-bottom: 15px;
+	}
+	&__item {
+		padding-bottom: calc(#{$layout_padding} * 2);
+		padding-top: calc(#{$layout_padding} * 2);
+	}
 }

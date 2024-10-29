@@ -21,10 +21,9 @@ select {
 	background-color: transparent;
 	border: 1px solid $dark_gray;
 	border-radius: 0;
-	color: $foreground;
+	color: $black;
 	display: block;
 	font-size: 1rem;
-	line-height: $lineheight_default;
 	outline: none;
 	padding: 12px 10px;
 	transition: color .2s;
@@ -41,15 +40,6 @@ select {
 		border-bottom-color: $medium_gray;
 		cursor: default;
 		pointer-events: none;
-	}
-	&:hover,
-	&:focus {
-
-	}
-	&:focus-visible {
-		@include mediaMinWidth( $mobileBreakpoint ){
-			box-shadow: $focus_default;
-		}
 	}
 }
 select {
@@ -119,7 +109,7 @@ textarea {
 	}
 	&__label {
 		display: block;
-		font-size: $fsize_small;
+		font-size: $fontSize_small;
 		margin: 0 0 5px;
 	}
 	// &__file {
@@ -153,17 +143,13 @@ textarea {
 	//         &:hover,
 	//         &:focus {
 	//             #{$file}-button {
-	//                 @include mediaMinWidth( $mobileBreakpoint ){
 	//                     background-color: lighten($focus, 5.75);
-	//                     color: $background;
-	//                 }
+	//                     color: $white;
 	//             }
 	//         }
 	//         &:focus {
 	//             #{$file}-button {
-	//                 @include mediaMinWidth( $mobileBreakpoint ){
 	//                     outline: 4px solid $focus;
-	//                 }
 	//             }
 	//         }
 	//         &:active {
@@ -206,11 +192,9 @@ textarea {
 	//     }
 
 	//     &:focus ~ &-button {
-	//         @include mediaMinWidth( $mobileBreakpoint ){
 	//             background-color: lighten($focus, 5.75);
-	//             color: $background;
+	//             color: $white;
 	//             outline: 4px solid $focus;
-	//         }
 	//     }
 	// }
 }
@@ -264,17 +248,15 @@ textarea {
 				}
 				
 				&:hover {
-					@include mediaMinWidth( $mobileBreakpoint ){
-						&::before {
-							background-color: $foreground;
-						}
+					&::before {
+						background-color: $black;
 					}
 				}
 			}
 
 			&:checked + span {
 				&::before {
-					background-color: $foreground;
+					background-color: $black;
 				}
 				&::after {
 					opacity: 1;
@@ -291,7 +273,7 @@ textarea {
 					border-radius: 2px;
 				}
 				&::after {
-					border-color: $background;
+					border-color: $white;
 					border-style: solid;
 					border-width: 0 3px 3px 0;
 					height: 14px;
@@ -325,7 +307,7 @@ textarea {
 		input[type=checkbox],
 		input[type=radio] {
 			+ span {
-				font-size: $fsize_xsmall;
+				font-size: $fontSize_xsmall;
 				padding-top: 3px;
 			}
 		}
@@ -352,7 +334,7 @@ textarea {
 		&::before {
 			animation: spin 0.75s 0s infinite ease;
 			animation-fill-mode: both;
-			border-color: $background $background transparent $background;
+			border-color: $white $white transparent $white;
 			border-radius: 100%;
 			border-style: solid;
 			border-width: 2px;
@@ -371,7 +353,7 @@ textarea {
 	.wpcf7-not-valid-tip {
 		color: $error;
 		display: block;
-		font-size: $fsize_xsmall;
+		font-size: $fontSize_xsmall;
 		margin-top: 2px;
 		padding-left: 20px;
 		position: relative;
@@ -395,10 +377,10 @@ textarea {
 			}
 		}
 		&::after {
-			color: $background;
+			color: $white;
 			content: '!';
 			font-size: 8px;
-			font-weight: $fweight_bold;
+			font-weight: 700;
 			left: 6px;
 			top: 4px;
 
@@ -421,10 +403,10 @@ textarea {
 			background-color: $focus;
 			border-radius: 100%;
 			content: 'i';
-			color: $background;
+			color: $white;
 			display: inline-block;
 			font-size: 14px;
-			font-weight: $fweight_bold;
+			font-weight: 700;
 			left: $layout_padding;
 			line-height: 20px;
 			text-align: center;
@@ -511,9 +493,9 @@ textarea {
 	}
 	&__button {
 		@extend %btn;
-		background: $background;
-		border-color: $foreground;
-		color: $foreground;
+		background: $white;
+		border-color: $black;
+		color: $black;
 	}
 	&__input {
 		color: $medium_gray;
@@ -531,14 +513,11 @@ textarea {
 
 	&:hover {
 		#{$f}__button {
-			@include mediaMinWidth( $mobileBreakpoint ){
-				box-shadow: 0px 0px 10px rgba($foreground, 0.2);
-				text-decoration: underline;
-			}
+			box-shadow: 0px 0px 10px rgba($black, 0.2);
+			text-decoration: underline;
 		}
 	}
-	input[type=file]:focus-visible ~ &__button {
-		box-shadow: $focus_default;
+	input[type=file]:focus ~ &__button {
 	}
 }
 
@@ -549,11 +528,11 @@ textarea {
  .custom-select {
 	$s: &;
 
-	color: $foreground;
+	color: $black;
 	position: relative;
 
 	&__title {
-		background-color: $background;
+		background-color: $white;
 		border: 1px solid $dark_gray;
 		border-radius: 5px;
 		cursor: pointer;
@@ -584,7 +563,7 @@ textarea {
 		}
 	}
 	&__list {
-		background: $background;
+		background: $white;
 		border: 1px solid $dark_gray;
 		border-radius: 0 0 5px 5px;
 		border-top: none;
@@ -609,41 +588,35 @@ textarea {
 		transition: background .2s;
 
 		a {
-			color: $foreground;
+			color: $black;
 			display: block;
 			text-decoration: none;
 
 			&:hover,
-			&:focus-visible {
-				@include mediaMinWidth( $mobileBreakpoint ){
-					color: $foreground;
-				}
+			&:focus {
+				color: $black;
 			}
 		}
 
 		&:hover,
-		&:focus-visible {
-			@include mediaMinWidth( $mobileBreakpoint ){
-				background: $light_gray;
-			}
+		&:focus {
+			background: $light_gray;
 		}
 	}
 
 
 	&:hover,
-	&:focus-visible {
-		@include mediaMinWidth( $mobileBreakpoint ){
-			#{$s}__title {
-				border-color: $medium_gray;
+	&:focus {
+		#{$s}__title {
+			border-color: $medium_gray;
 
-				&::after {
-					filter: none;
-					opacity: 1;
-				}
+			&::after {
+				filter: none;
+				opacity: 1;
 			}
-			#{$s}__list {
-				border-color: $medium_gray;
-			}
+		}
+		#{$s}__list {
+			border-color: $medium_gray;
 		}
 	}
 	&.is-active {
