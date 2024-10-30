@@ -25,7 +25,7 @@ function cs__the_breadcrumbs( $modifier='' ){
 
 		} else if ( is_home() ){
 			echo $homeItem .''. $delimiter;
-			echo $beforeCurrent .'Latest posts'. $afterCurrent;
+			echo $beforeCurrent . get_the_title(get_option('page_for_posts')) . $afterCurrent;
 
 		} else {
 			echo $homeItem .''. $delimiter;
@@ -38,7 +38,7 @@ function cs__the_breadcrumbs( $modifier='' ){
 				echo $beforeCurrent .single_cat_title('', false). $afterCurrent;
 
 			} elseif ( is_search() ){
-				echo $beforeCurrent .'Search results for "'. get_search_query() .'"'. $afterCurrent;
+				echo $beforeCurrent .'Search results for: '. get_search_query() . $afterCurrent;
 
 			} elseif ( is_day() ){
 				echo '<a href="'. get_year_link(get_the_time('Y')) .'">'. get_the_time('Y') .'</a>'. $delimiter;
@@ -57,6 +57,25 @@ function cs__the_breadcrumbs( $modifier='' ){
 					$post_type = get_post_type();
 					$post_type_obj = get_post_type_object($post_type);
 					echo '<a href="'. get_post_type_archive_link($post_type) .'">'. $post_type_obj->labels->singular_name .'</a>';
+
+					if ( $post->post_parent ){
+						$parent_id = $post->post_parent;
+						$breadcrumbs = array();
+						while ( $parent_id ){
+							$page = get_page($parent_id);
+							$breadcrumbs[] = '<a href="'. get_permalink($page->ID) .'">'. get_the_title($page->ID) .'</a>';
+							$parent_id = $page->post_parent;
+						}
+						$breadcrumbs = array_reverse($breadcrumbs);
+						echo $delimiter;
+						for ( $i=0; $i<count($breadcrumbs); $i++ ){
+							echo $breadcrumbs[$i];
+							if ( $i!=count($breadcrumbs)-1 ){
+								echo $delimiter;
+							}
+						}
+					}
+
 					if ( $showCurrent==1 ){
 						echo $delimiter. $beforeCurrent .get_the_title(). $afterCurrent;
 					}

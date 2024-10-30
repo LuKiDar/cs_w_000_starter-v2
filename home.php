@@ -34,7 +34,7 @@ $taxonomy_category = get_categories($args); ?>
 		<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ): the_post(); ?>
 				<div class="news-feed__item col col--4 col--md-6 col--sm-6 col--xs-12">
-					<?php get_template_part('parts/content/post-card'); ?>
+					<?php get_template_part('parts/content/post-card/post-card'); ?>
 				</div>
 			<?php endwhile; ?>
 

@@ -4,11 +4,22 @@
 
 .post-card {
 	$c: &;
+	
+	display: grid;
+	grid-template-areas:
+		"image"
+		"content"
+		"navigation";
+	grid-template-columns: 1fr;
+	grid-template-rows: 10rem 1fr auto;
 
 	&__media-wrap {
-		margin: 0 0 rem(25);
+		grid-area: image;
+		line-height: 0;
+		margin: 0 0 $layout_padding;
 		overflow: hidden;
 		position: relative;
+		z-index: 1;
 
 		&:hover,
 		&:focus {
@@ -19,22 +30,16 @@
 		}
 	}
 	&__image {
+		display: block;
 		height: 100%;
-		overflow: hidden;
-		padding-top: 56.25%;
-		position: relative;
+		left: 0;
+		object-fit: cover;
+		object-position: 50% 50%;
+		position: absolute;
+		top: 0;
 		transition: opacity .2s, transform .2s;
+		width: 100%;
 		z-index: 1;
-		
-		img {
-			height: 100%;
-			left: 0;
-			object-fit: cover;
-			object-position: center;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
 	}
 	&__media-link {
 		bottom: 0;
@@ -42,7 +47,12 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		z-index: 5;
+		z-index: 3;
+	}
+	&__content-wrap {
+		display: flex;
+		flex-flow: column nowrap;
+		grid-area: content;
 	}
 	&__meta {
 		color: $medium_gray;
@@ -84,12 +94,13 @@
 		}
 	}
 	&__title {
-		margin: 0 0 rem(15);
+		margin: 0 0 1rem;
 	}
 	&__excerpt {
-		margin: rem(20) 0 rem(15);
+		margin: 0 0 1rem;
 	}
 	&__navigation {
-		margin: rem(30) 0 0;
+		grid-area: navigation;
+		margin: 2rem 0 0;
 	}
 }

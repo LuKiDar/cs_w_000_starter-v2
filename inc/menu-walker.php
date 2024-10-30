@@ -5,6 +5,8 @@
 
 /*** Header menu Walker ***/
 class cs__header_menu_walker extends Walker_Nav_Menu {
+	private $curItem;
+
 	// add classes to ul sub-menus
 	function start_lvl( &$output, $depth=0, $args=array() ){
 		// depth dependent classes
@@ -25,6 +27,8 @@ class cs__header_menu_walker extends Walker_Nav_Menu {
 	// add main/sub classes to li's and links
 	function start_el( &$output, $item, $depth=0, $args=array(), $current_object_id=0 ){
 		global $wp_query;
+		$this->curItem = $item;
+
 		$indent = ($depth>0 ? str_repeat("\t", $depth) : ''); // code indent
 		// depth dependent classes
 		$depth_classes = array(

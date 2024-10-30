@@ -16,7 +16,7 @@ function cs__custom_menu_order( $menu_order ){
 		'edit.php'								=> 12,	// Posts
 		// 'edit.php?post_type=example_cpt'		=> 13,	// Custom CPT
 		'upload.php'							=> 20,	// Media
-		// 'wpcf7'									=> 21,	// Contact
+		// 'wpcf7'								=> 21,	// Contact
 		'theme-settings'						=> 22,	// ACF: Theme Settings
 		// 'acf-options-general'				=> 23,	// ACF: Theme Settings
 		
@@ -103,10 +103,11 @@ add_filter('mce_buttons_2', 'cs__mce_add_more_buttons');
 function cs__mce_before_init( $settings ){
 	$textcolor_map = array(
 		'000', 'Black',
+		'FFF', 'White',
+
 		'595959', 'Dark gray',
 		'919191', 'Medium gray',
 		'F5F5F5', 'Light gray',
-		'FFF', 'White',
 	);
 	$style_formats = array(
 		array(
@@ -121,12 +122,25 @@ function cs__mce_before_init( $settings ){
 				['title' => 'Code',				'icon' => 'code',			'format' => 'code'],
 			)
 		),
+		array(
+			'title' => 'Font sizes',
+			'items' => array(
+				['title' => 'Mega',				'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-mega-font-size'],
+				['title' => 'Giant',			'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-giant-font-size'],
+				['title' => 'Huge / Heading 1',	'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-huge-font-size'],
+				['title' => 'XXL / Heading 2',	'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-xx-large-font-size'],
+				['title' => 'XL / Heading 3',	'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-x-large-font-size'],
+				['title' => 'L / Heading 4',	'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-large-font-size'],
+				['title' => 'M',				'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-medium-font-size'],
+				['title' => 'S / Base',			'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-small-font-size'],
+				['title' => 'XS',				'selector' => 'p,h1,h2,h3,h4,h5,h6',	'classes' => 'has-x-small-font-size'],
+			)
+		),
 		// array(
 		// 	'title' => 'Buttons',
 		// 	'items' => array(
 		// 		['title' => 'Default button',	'selector' => 'a',	'classes' => 'button--fill',		'icon' => 'link'],
 		// 		['title' => 'Outlined button',	'selector' => 'a',	'classes' => 'button--outline',		'icon' => 'link'],
-		// 		['title' => 'White button',		'selector' => 'a',	'classes' => 'button--fill-white',	'icon' => 'link'],
 		// 	)
 		// )
 	);

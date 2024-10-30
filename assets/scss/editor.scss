@@ -1,0 +1,59 @@
+/*** Base styling ***/
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/grid';
+
+
+/*** Global styles ***/
+.editor-styles-wrapper {}
+
+
+/*** TinyMCE ***/
+.mce-content-body {
+	p {
+		margin: 0 0 1rem;
+	
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	h1, h2,	h3,	h4,	h5,	h6 {
+		margin: 0 0 1rem;
+	
+		&:first-child {
+			margin-top: 0 !important;
+		}
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	.has-mega-font-size {
+		font-size: rem(80);
+	}
+	.has-giant-font-size {
+		font-size: rem(60);
+	}
+	h1, .has-huge-font-size {
+		font-size: rem(50);
+	}
+	h2, .has-xx-large-font-size {
+		font-size: rem(40);
+	}
+	h3, .has-x-large-font-size {
+		font-size: rem(40);
+	}
+	h4, .has-large-font-size {
+		font-size: rem(24);
+	}
+	h5, .has-medium-font-size {
+		font-size: rem(18);
+	}
+	.has-small-font-size {
+		font-size: rem(16);
+	}
+	h6, .has-x-small-font-size {
+		font-size: rem(14);
+	}
+}
