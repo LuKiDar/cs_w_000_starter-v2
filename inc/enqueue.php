@@ -33,14 +33,12 @@ function cs__enqueue_theme_styles(){
 }
 add_action('wp_enqueue_scripts', 'cs__enqueue_theme_styles');
 
-
 // Editor styles
 function cs__enqueue_editor_styles(){
 	add_theme_support('editor-styles');
 	add_editor_style('assets/css/editor.css');
 }
 add_action('after_setup_theme', 'cs__enqueue_editor_styles');
-
 
 // Admin styles
 function cs__enqueue_admin_styles(){
@@ -49,14 +47,12 @@ function cs__enqueue_admin_styles(){
 }
 add_action('admin_enqueue_scripts', 'cs__enqueue_admin_styles');
 
-
 // Login styles
 function cs__enqueue_login_styles() {
 	wp_register_style('login-styles', get_template_directory_uri() . '/assets/css/login.css', array(), filemtime(get_template_directory() . '/assets/css/login.css'), 'all');
 	wp_enqueue_style('login-styles');
 }
 // add_action('login_head', 'cs__enqueue_login_styles');
-
 
 // Disable default WooCommerce styles
 // add_filter('woocommerce_enqueue_styles', '__return_empty_array');

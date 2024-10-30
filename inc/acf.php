@@ -3,12 +3,34 @@
  * ACF Configuration
  */
 
-/*** ACF: hide menu item ***/
-//add_filter('acf/settings/show_admin', '__return_false');
-
-
-/*** ACF: Disable CPT and taxonomy functionality ***/
+/*** ACF: disable CPT and taxonomy functionality ***/
 add_filter('acf/settings/enable_post_types', '__return_false');
+
+
+/*** ACF: add Menu Level rule ***/
+function cs__acf_location_rules_types( $choices ){
+	$choices['Menu']['menu_level'] = 'Menu Level';
+	
+	return $choices;
+}
+add_filter('acf/location/rule_types', 'cs__acf_location_rules_types');
+
+function cs__acf_location_rule_values_level( $choices ){
+	$choices[0] = 'First';
+	$choices[1] = 'Second';
+	
+	return $choices;
+}
+add_filter('acf/location/rule_values/menu_level', 'cs__acf_location_rule_values_level');
+
+function cs__acf_location_rule_match_level( $match, $rule, $options, $field_group ){
+	if ( $rule['operator']=='==' ){
+		$match = ( $options['nav_menu_item_depth'] == $rule['value'] );
+	}
+	
+	return $match;
+}
+add_filter('acf/location/rule_match/menu_level', 'cs__acf_location_rule_match_level', 10, 4);
 
 
 /*** ACF: register Options page ***/
