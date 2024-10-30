@@ -57,20 +57,6 @@ $fontSize_huge:			var(--wp--preset--font-size--huge);
 $fontSize_giant:		var(--wp--preset--font-size--giant);
 $fontSize_mega:			var(--wp--preset--font-size--mega);
 
-@media screen and ( max-width: 1024px ){
-	body {
-		// --wp--preset--font-size--x-small: 0.875rem;
-		// --wp--preset--font-size--small: 1rem;
-		// --wp--preset--font-size--medium: 1.125rem;
-		// --wp--preset--font-size--large: 1.375rem;
-		// --wp--preset--font-size--x-large: 1.625rem;
-		// --wp--preset--font-size--xx-large: 2.25rem;
-		// --wp--preset--font-size--huge: 4rem;
-		// --wp--preset--font-size--giant: 4rem;
-		// --wp--preset--font-size--mega: 4rem;
-	}
-}
-
 $borderRadius_small:	var(--wp--custom--border-radius--small);
 $borderRadius_medium:	var(--wp--custom--border-radius--medium);
 

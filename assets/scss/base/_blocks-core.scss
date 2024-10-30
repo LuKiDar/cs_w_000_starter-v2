@@ -1,0 +1,61 @@
+/**
+ * WP blocks
+ */
+
+/*** Responsive fixes for variables ***/
+@include mediaMaxWidth( $mobileBreakpoint ){
+	body {
+		// --wp--preset--font-size--x-small: 0.875rem;
+		// --wp--preset--font-size--small: 1rem;
+		// --wp--preset--font-size--medium: 1.125rem;
+		// --wp--preset--font-size--large: 1.375rem;
+		// --wp--preset--font-size--x-large: 1.625rem;
+		// --wp--preset--font-size--xx-large: 2.25rem;
+		// --wp--preset--font-size--huge: 4rem;
+		// --wp--preset--font-size--giant: 4rem;
+		// --wp--preset--font-size--mega: 4rem;
+	}
+}
+
+
+/*** Basics ***/
+// Heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-block-start: $layout_padding;
+	margin-block-end: $layout_padding;
+
+    &:first-child {
+        margin-block-start: 0;
+    }
+    &:last-child {
+        margin-block-end: 0;
+    }
+}
+
+
+// Image
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+figure.wp-caption {
+	max-width: 100%;
+}
+
+
+/*** Accessible Colors ***/
+.has-background {
+	color: $black;
+}
+.has-primary-background-color,
+.has-secondary-background-color,
+.has-tertiary-background-color,
+.has-foreground-background-color {
+	color: $white;
+}

@@ -14,7 +14,7 @@
 			
 			/*** JS Validation ***/
 			jshint: {
-				all: ['Gruntfile.js', 'assets/js/source/*.js'], //'parts/block/*/src/*.js'
+				all: ['Gruntfile.js', 'assets/js/source/*.js'],
 				options: {
 					"bitwise": true,
 					"browser": true,
@@ -46,8 +46,7 @@
 						separator: ';\n',
 					},
 					files: {
-						'assets/js/theme.js': ['assets/js/vendor/*.js', 'assets/js/vendor/*/*.js', 'assets/js/source/*.js'],
-						// 'parts/block/*/script.js': ['parts/block/*/src/*.js', 'parts/block/*/src/*/*.js'],
+						'assets/js/theme.js': ['assets/js/vendor/*.js', 'assets/js/vendor/*/*.js', 'assets/js/source/*.js']
 					},
 				}
 			},
@@ -56,8 +55,7 @@
 			uglify: {
 				dist: {
 					files: {
-						'assets/js/theme.js': ['assets/js/theme.js'],
-						// 'parts/block/*/script.js': ['parts/block/*/script.js']
+						'assets/js/theme.js': ['assets/js/theme.js']
 					},
 				}
 			},
@@ -133,7 +131,6 @@
 
 		/*** Register tasks ***/
 		grunt.registerTask('default', [
-			'clean',
 			'jshint',
 			'concat',
 			'uglify',

@@ -20,7 +20,6 @@ if ( function_exists('add_theme_support') ){
 	add_theme_support('responsive-embeds');
 	add_theme_support('title-tag');
 	add_theme_support('wp-block-styles');
-	// add_theme_support('align-wide');
 	//add_theme_support('woocommerce');
 
 	// Enable translations

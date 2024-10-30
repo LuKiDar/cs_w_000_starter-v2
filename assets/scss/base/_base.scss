@@ -11,15 +11,17 @@
 	min-width: 0;
 }
 html {
+	box-sizing: border-box;
 	height: 100%;
+
+	*, *::before, *::after {
+		box-sizing: inherit;
+	}
 }
 body {
 	overflow-x: hidden;
 	word-wrap: break-word;
 
-	* {
-		outline: none;
-	}
 	&.is-menu-active,
 	&.is-modal-active {
 		overflow: hidden;

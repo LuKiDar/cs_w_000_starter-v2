@@ -97,8 +97,8 @@
 			"minHeight": true
 		},
 		"layout": {
-			"allowCustomContentAndWideSize": false,
-			"allowEditing": false,
+			"allowCustomContentAndWideSize": true,
+			"allowEditing": true,
 			"contentSize": "var(--wp--custom--layout--content)",
 			"wideSize": "var(--wp--custom--layout--wide)"
 		},
@@ -527,6 +527,12 @@
 					"textDecoration": "underline"
 				}
 			}
+		},
+		"outline": {
+			"color": "var(--wp--preset--color--black)",
+			"offset": "2px",
+			"style": "solid",
+			"width": "2px"
 		},
 		"spacing": {
 			"blockGap": "var(--wp--custom--layout--block-gap)",

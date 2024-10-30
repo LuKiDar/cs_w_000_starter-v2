@@ -7,7 +7,15 @@
 
 
 /*** Global styles ***/
-.editor-styles-wrapper {}
+.editor-styles-wrapper {
+	padding-left: $layout_padding;
+	padding-right: $layout_padding;
+
+	.block-editor-block-list__layout.is-root-container > .alignfull {
+		margin-left: calc(#{$layout_padding} * -1);
+		margin-right: calc(#{$layout_padding} * -1);
+	}
+}
 
 
 /*** TinyMCE ***/
