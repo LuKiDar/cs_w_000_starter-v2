@@ -14,37 +14,39 @@
 	padding: 0;
 
 	&__icon {
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: contain;
+		background: $red;
+		mask-position: 50% 50%;
+		mask-repeat: no-repeat;
+		mask-size: contain;
 		color: inherit;
 		display: block;
 		height: rem(24);
 		position: relative;
+		transition: background 0.2s;
 		width: rem(24);
 
 		&--email {
-			background-image: url('../img/icons/icon-envelope.svg');
+			mask-image: url('../img/icons/icon-envelope.svg');
 		}
 		&--facebook {
-			background-image: url('../img/icons/icon-facebook.svg');
+			mask-image: url('../img/icons/icon-facebook.svg');
 		}
 		&--instagram {
-			background-image: url('../img/icons/icon-instagram.svg');
+			mask-image: url('../img/icons/icon-instagram.svg');
 		}
 		&--linkedin {
-			background-image: url('../img/icons/icon-linkedin.svg');
+			mask-image: url('../img/icons/icon-linkedin.svg');
 		}
 		&--twitter {
-			background-image: url('../img/icons/icon-twitter.svg');
+			mask-image: url('../img/icons/icon-twitter.svg');
 		}
 		&--youtube {
-			background-image: url('../img/icons/icon-youtube.svg');
+			mask-image: url('../img/icons/icon-youtube.svg');
 		}
 			
 		&:hover,
 		&:focus {
-			opacity: 0.7;
+			background: $bright_red;
 		}
 	}
 }
