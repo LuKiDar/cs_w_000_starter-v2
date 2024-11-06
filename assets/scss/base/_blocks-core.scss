@@ -1,5 +1,5 @@
 /**
- * WP blocks
+ * Blocks core
  */
 
 /*** Responsive fixes for variables ***/
@@ -9,32 +9,52 @@
 		// --wp--preset--font-size--small: 1rem;
 		// --wp--preset--font-size--medium: 1.125rem;
 		// --wp--preset--font-size--large: 1.375rem;
-		// --wp--preset--font-size--x-large: 1.625rem;
-		// --wp--preset--font-size--xx-large: 2.25rem;
-		// --wp--preset--font-size--huge: 4rem;
-		// --wp--preset--font-size--giant: 4rem;
-		// --wp--preset--font-size--mega: 4rem;
+		// --wp--preset--font-size--x-large: 1.5625rem;
+		// --wp--preset--font-size--xx-large: 2.1875rem;
+		// --wp--preset--font-size--huge: 3.125rem;
+		// --wp--preset--font-size--giant: 3.125rem;
+		// --wp--preset--font-size--mega: 3.125rem;
 	}
 }
 
 
 /*** Basics ***/
-// Heading
+// Typography
+p {
+	margin-block-start: 0;
+	margin-block-end: $layout_blockGap;
+
+	&:last-child {
+		margin-block-end: 0;
+	}
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	margin-block-start: $layout_padding;
-	margin-block-end: $layout_padding;
+	margin-block-start: $layout_blockGap;
+	margin-block-end: $layout_blockGap;
 
-    &:first-child {
-        margin-block-start: 0;
-    }
-    &:last-child {
-        margin-block-end: 0;
-    }
+	&:first-child {
+		margin-block-start: 0;
+	}
+	&:last-child {
+		margin-block-end: 0;
+	}
+}
+a {
+	transition: all .2s;
+
+	&.builtin {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
 }
 
 
@@ -43,6 +63,25 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+
+	&.alignleft {
+		float: left;
+		margin: 0 $layout_blockGap $layout_blockGap 0;
+		max-width: calc( #{$layout_content} / 2 );
+	}
+	&.alignright {
+		float: right;
+		margin: 0 0 $layout_blockGap $layout_blockGap;
+		max-width: calc( #{$layout_content} / 2 );
+	}
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&.emoji {
+		max-width: 1rem;
+		display: inline-block;
+	}
 }
 figure.wp-caption {
 	max-width: 100%;

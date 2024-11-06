@@ -15,14 +15,14 @@
 	display: block;
 	min-height: rem(100);
 
-	&:first-child {
-		margin-top: 0 !important;
+	body:not(.wp-admin) & {
+		&:first-child {
+			margin-top: 0 !important;
+		}
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
 	}
-	&:last-child {
-		margin-bottom: 0 !important;
-	}
-
-	body:not(.wp-admin) & {}
 	.wp-block & {
 		* {
 			box-sizing: border-box;
