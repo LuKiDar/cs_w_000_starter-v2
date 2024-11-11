@@ -5,13 +5,14 @@
 /*** Grid and breakpoints ***/
 $layout_columns:		12;
 $layout_padding:		var(--wp--custom--layout--padding);
+$layout_blockGap:		var(--wp--custom--layout--block-gap);
 $layout_content:		var(--wp--custom--layout--content);
 $layout_wide:			var(--wp--custom--layout--wide);
 $layout_breakout:		calc((var(--wp--custom--layout--wide) - var(--wp--custom--layout--content)) / 2);
 
 $breakpoints: (
 	xs: 551,
-	sm: 769,
+	sm: 782,
 	md: 1025,
 	lg: 1201,
 	xl: 1366

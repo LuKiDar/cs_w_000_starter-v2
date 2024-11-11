@@ -41,7 +41,7 @@ class cs__header_menu_walker extends Walker_Nav_Menu {
 
 		// passed classes
 		$classes = empty($item->classes) ? array() : (array) $item->classes;
-		$class_names = esc_attr(implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item)));
+		$class_names = esc_attr(implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args)));
 
 		// build html
 		$output .= $indent .'<li id="menu-item-'. $item->ID .'" class="' . $class_names .' '. $depth_class_names .'" data-content="'. $item->title .'">';

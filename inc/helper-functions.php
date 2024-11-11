@@ -43,3 +43,25 @@ function cs__set_block_styles( $block_id, $margin_desktop, $margin_mobile ){ ?>
 		}
 	</style>
 <?php }
+
+
+/*** Parse content in search of a block ***/
+function cs__has_block( $post_content, $block_name='' ){
+	$blocks = parse_blocks($post_content);
+
+	foreach ( $blocks as $block ){
+		if ( $block['blockName']===$block_name ){
+			return true;
+		}
+
+		if ( !empty($block['innerBlocks']) ){
+			foreach ( $block['innerBlocks'] as $innerBlock ){
+				if ( $innerBlock['blockName']===$block_name ){
+					return true;
+				}
+			}
+		}
+	}
+
+	return false;
+}
