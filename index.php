@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Main default loop
+ */
+
+get_header(); ?>
 
 <div class="news-feed container">
 	<header class="news-feed__header grid grid--1">

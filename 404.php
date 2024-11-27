@@ -1,6 +1,11 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Error 404 page (Not found)
+ */
 
-<article class="page-404 container">
+get_header(); ?>
+
+<section class="page-404 container">
 	<div class="page-404__container grid grid--jc-center">
 		<header class="page-404__header col col--8 col--md-12 col--sm-12 col--xs-12">
 			<h1 class="page-404__title">Page Not Found</h1>

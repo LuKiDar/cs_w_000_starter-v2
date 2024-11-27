@@ -1,4 +1,9 @@
-<?php get_header();
+<?php
+/**
+ * Posts page (Blog)
+ */
+
+get_header();
 
 $page_for_posts = get_option('page_for_posts');
 

@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Single post
+ */
+
+get_header(); ?>
 
 <div class="default-page container">
 	<header class="default-page__header ">

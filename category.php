@@ -1,4 +1,9 @@
-<?php get_header();
+<?php
+/**
+ * Category page
+ */
+
+get_header();
 
 $page_for_posts = get_option('page_for_posts');
 $current_category = get_queried_object();
