@@ -65,3 +65,14 @@ function cs__has_block( $post_content, $block_name='' ){
 
 	return false;
 }
+
+
+/*** Generate URL handle from text line ***/
+function cs__generate_url_handle( $text ){
+	$handle = strtolower($text);
+	$handle = preg_replace('/[^\w\s]/u', '', $handle);
+	$handle = preg_replace('/\s+/', '-', $handle);
+	$handle = trim($handle, '-');
+
+	return $handle;
+}
